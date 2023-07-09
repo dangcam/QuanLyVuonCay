@@ -85,19 +85,6 @@
                     </div>
 
                     <ul class="navbar-nav header-right">
-                        <li class="nav-item dropdown ">
-                            <a class="nav-link" href="#" role="button" data-toggle="dropdown">
-                                <span><?=session()->get('lang')=='vi'?'vi':'en'?></span>
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right">
-                                <a href="<?=base_url()?>dashboard/lang/vi" class="dropdown-item">
-                                  <span class="ml-2">Vietnamese</span>
-                                </a>
-                                <a href="<?=base_url()?>dashboard/lang/en" class="dropdown-item">
-                                    <span class="ml-2">English</span>
-                                </a>
-                            </div>
-                        </li>
                         <li class="nav-item dropdown header-profile">
                             <a class="nav-link" href="#" role="button" data-toggle="dropdown">
                                 <i class="mdi mdi-account"></i>

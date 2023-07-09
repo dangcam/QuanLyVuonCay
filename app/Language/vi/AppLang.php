@@ -2,7 +2,7 @@
 
 return[
     // Tiêu đề
-    'page_title'=>'Quản lý báo cáo',
+    'page_title'=>'Quản lý vườn cây',
     'page_title_home'=>'Trang chủ',
     'page_title_groups' => 'Danh sách chi nhánh',
     'page_title_functions' => 'Danh sách chức năng',

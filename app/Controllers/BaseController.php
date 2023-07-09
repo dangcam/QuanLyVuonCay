@@ -58,8 +58,7 @@ abstract class BaseController extends Controller
         $this->libauth = new lib_auth();
         $this->language = \Config\Services::language();
         $this->session = \Config\Services::session();
-        $lang = $this->session->get('lang');
-        $this->language->setLocale($lang);
+        $this->language->setLocale('vi');
     }
     public function page_construct($page,$meta = array(),$data = array())
     {
