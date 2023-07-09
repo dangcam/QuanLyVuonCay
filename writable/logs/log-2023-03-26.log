@@ -1,0 +1,237 @@
+ERROR - 2023-03-26 03:41:00 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\Software\Xampp\htdocs\codeigniter4\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 D:\Software\Xampp\htdocs\codeigniter4\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'qlbaocao', 3306, '', 0)
+#1 D:\Software\Xampp\htdocs\codeigniter4\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Software\Xampp\htdocs\codeigniter4\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Software\Xampp\htdocs\codeigniter4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Software\Xampp\htdocs\codeigniter4\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Software\Xampp\htdocs\codeigniter4\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 D:\Software\Xampp\htdocs\codeigniter4\app\Models\UserModel.php(47): CodeIgniter\BaseModel->findAll()
+#7 D:\Software\Xampp\htdocs\codeigniter4\app\Controllers\Dashboard\UserController.php(28): App\Models\UserModel->list_users()
+#8 D:\Software\Xampp\htdocs\codeigniter4\system\CodeIgniter.php(934): App\Controllers\Dashboard\UserController->index()
+#9 D:\Software\Xampp\htdocs\codeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\UserController))
+#10 D:\Software\Xampp\htdocs\codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 D:\Software\Xampp\htdocs\codeigniter4\public\index.php(68): CodeIgniter\CodeIgniter->run()
+#12 D:\Software\Xampp\htdocs\codeigniter4\system\Commands\Server\rewrite.php(47): require_once('D:\\Software\\Xam...')
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\Software\Xampp\htdocs\codeigniter4\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 D:\Software\Xampp\htdocs\codeigniter4\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Software\Xampp\htdocs\codeigniter4\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Software\Xampp\htdocs\codeigniter4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\Software\Xampp\htdocs\codeigniter4\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Software\Xampp\htdocs\codeigniter4\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 D:\Software\Xampp\htdocs\codeigniter4\app\Models\UserModel.php(47): CodeIgniter\BaseModel->findAll()
+#6 D:\Software\Xampp\htdocs\codeigniter4\app\Controllers\Dashboard\UserController.php(28): App\Models\UserModel->list_users()
+#7 D:\Software\Xampp\htdocs\codeigniter4\system\CodeIgniter.php(934): App\Controllers\Dashboard\UserController->index()
+#8 D:\Software\Xampp\htdocs\codeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\UserController))
+#9 D:\Software\Xampp\htdocs\codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Software\Xampp\htdocs\codeigniter4\public\index.php(68): CodeIgniter\CodeIgniter->run()
+#11 D:\Software\Xampp\htdocs\codeigniter4\system\Commands\Server\rewrite.php(47): require_once('D:\\Software\\Xam...')
+#12 {main}
+CRITICAL - 2023-03-26 03:41:00 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`', [], false)
+ 3 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\UserModel.php(47): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Dashboard\UserController.php(28): App\Models\UserModel->list_users()
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\UserController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-26 03:41:35 --> Array to string conversion
+in APPPATH\Controllers\Dashboard\UserController.php on line 25.
+ 1 APPPATH\Controllers\Dashboard\UserController.php(25): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\Dashboard\\UserController.php', 25)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\UserController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-26 03:51:19 --> Access level to App\Models\UserModel::$validationRules must be protected (as in class CodeIgniter\BaseModel) or weaker
+in APPPATH\Models\UserModel.php on line 8.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-03-26 03:54:33 --> CodeIgniter\Validation\Validation::setRule(): Argument #1 ($field) must be of type string, array given, called in D:\Software\Xampp\htdocs\codeigniter4\app\Models\UserModel.php on line 62
+in SYSTEMPATH\Validation\Validation.php on line 429.
+ 1 APPPATH\Models\UserModel.php(62): CodeIgniter\Validation\Validation->setRule([...], [...])
+ 2 APPPATH\Models\UserModel.php(51): App\Models\UserModel->validateUser([...])
+ 3 APPPATH\Controllers\Dashboard\UserController.php(25): App\Models\UserModel->create_user([...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\UserController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\UserController))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-26 04:00:59 --> syntax error, unexpected token ";"
+in APPPATH\Models\UserModel.php on line 56.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\UserModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\UserModel')
+ 3 APPPATH\Controllers\Dashboard\UserController.php(16): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\UserModel')
+ 4 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Dashboard\UserController->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-26 04:01:02 --> syntax error, unexpected token ";"
+in APPPATH\Models\UserModel.php on line 56.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\UserModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\UserModel')
+ 3 APPPATH\Controllers\Dashboard\UserController.php(16): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\UserModel')
+ 4 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Dashboard\UserController->__construct()
+ 5 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-26 04:02:06 --> Attempt to read property "user_id" on array
+in APPPATH\Views\dashboard\user.php on line 91.
+ 1 APPPATH\Views\dashboard\user.php(91): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "user_id" on array', 'APPPATH\\Views\\dashboard\\user.php', 91)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\dashboard\\user.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/user', [], true)
+ 5 APPPATH\Controllers\BaseController.php(64): view('dashboard/user', [...])
+ 6 APPPATH\Controllers\Dashboard\UserController.php(29): App\Controllers\BaseController->page_construct('dashboard/user', [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\UserController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-26 04:03:59 --> syntax error, unexpected variable "$user", expecting "," or ";"
+in APPPATH\Views\dashboard\user.php on line 94.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/user', [], true)
+ 3 APPPATH\Controllers\BaseController.php(64): view('dashboard/user', [...])
+ 4 APPPATH\Controllers\Dashboard\UserController.php(29): App\Controllers\BaseController->page_construct('dashboard/user', [...], [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\UserController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\UserController))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-26 04:04:20 --> Attempt to read property "username" on array
+in APPPATH\Views\dashboard\user.php on line 92.
+ 1 APPPATH\Views\dashboard\user.php(92): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "username" on array', 'APPPATH\\Views\\dashboard\\user.php', 92)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\dashboard\\user.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/user', [], true)
+ 5 APPPATH\Controllers\BaseController.php(64): view('dashboard/user', [...])
+ 6 APPPATH\Controllers\Dashboard\UserController.php(29): App\Controllers\BaseController->page_construct('dashboard/user', [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\UserController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-26 04:05:40 --> Attempt to read property "phonenumber" on array
+in APPPATH\Views\dashboard\user.php on line 96.
+ 1 APPPATH\Views\dashboard\user.php(96): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "phonenumber" on array', 'APPPATH\\Views\\dashboard\\user.php', 96)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\dashboard\\user.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/user', [], true)
+ 5 APPPATH\Controllers\BaseController.php(64): view('dashboard/user', [...])
+ 6 APPPATH\Controllers\Dashboard\UserController.php(29): App\Controllers\BaseController->page_construct('dashboard/user', [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\UserController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-26 04:29:58 --> Attempt to read property "errno" on bool
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 567.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(567): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "errno" on bool', 'SYSTEMPATH\\Database\\MySQLi\\Connection.php', 567)
+ 2 SYSTEMPATH\Model.php(508): CodeIgniter\Database\MySQLi\Connection->error()
+ 3 SYSTEMPATH\BaseModel.php(1162): CodeIgniter\Model->doErrors()
+ 4 APPPATH\Models\UserModel.php(52): CodeIgniter\BaseModel->errors()
+ 5 APPPATH\Controllers\Dashboard\UserController.php(25): App\Models\UserModel->create_user([...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\UserController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\UserController))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-26 06:10:09 --> Class "App\Models\BaseModel" not found
+in APPPATH\Models\UserModel.php on line 5.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\UserModel.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\UserModel')
+ 4 APPPATH\Controllers\Dashboard\UserController.php(16): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\UserModel')
+ 5 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Dashboard\UserController->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-26 06:10:38 --> Class "App\Models\BaseModel" not found
+in APPPATH\Models\UserModel.php on line 4.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once()
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\UserModel.php')
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\UserModel')
+ 4 APPPATH\Controllers\Dashboard\UserController.php(16): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\UserModel')
+ 5 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Dashboard\UserController->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-26 06:10:56 --> syntax error, unexpected token "use", expecting "{"
+in APPPATH\Models\BaseModel.php on line 3.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\BaseModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\BaseModel')
+ 3 APPPATH\Models\UserModel.php(4): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\BaseModel')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once('APPPATH\\Models\\UserModel.php')
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\UserModel.php')
+ 6 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\UserModel')
+ 7 APPPATH\Controllers\Dashboard\UserController.php(16): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\UserModel')
+ 8 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Dashboard\UserController->__construct()
+ 9 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-26 06:25:57 --> Declaration of App\Models\BaseModel::errors() must be compatible with CodeIgniter\BaseModel::errors(bool $forceDB = false)
+in APPPATH\Models\BaseModel.php on line 24.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-03-26 06:37:46 --> Call to a member function line() on null
+in APPPATH\Models\BaseModel.php on line 28.
+ 1 APPPATH\Controllers\Dashboard\UserController.php(26): App\Models\BaseModel->get_errors()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\UserController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-26 06:50:22 --> syntax error, unexpected token "(", expecting identifier or variable or "{" or "$"
+in APPPATH\Models\BaseModel.php on line 37.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\BaseModel.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\BaseModel')
+ 3 APPPATH\Models\UserModel.php(4): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\BaseModel')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(312): include_once('APPPATH\\Models\\UserModel.php')
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Models\\UserModel.php')
+ 6 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Models\\UserModel')
+ 7 APPPATH\Controllers\Dashboard\UserController.php(16): CodeIgniter\Autoloader\Autoloader->loadClass('App\\Models\\UserModel')
+ 8 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\Dashboard\UserController->__construct()
+ 9 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-26 06:50:38 --> Call to undefined method App\Models\UserModel::lang
+in SYSTEMPATH\Model.php on line 842.
+ 1 APPPATH\Models\BaseModel.php(28): CodeIgniter\Model->__call('lang', [...])
+ 2 APPPATH\Controllers\Dashboard\UserController.php(26): App\Models\BaseModel->get_errors()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-26 06:53:32 --> lang(): Argument #1 ($line) must be of type string, array given, called in D:\Software\Xampp\htdocs\codeigniter4\app\Models\BaseModel.php on line 28
+in SYSTEMPATH\Common.php on line 762.
+ 1 APPPATH\Models\BaseModel.php(28): lang([...])
+ 2 APPPATH\Controllers\Dashboard\UserController.php(26): App\Models\BaseModel->get_errors()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\UserController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-03-26 06:55:59 --> Unsupported operand types: string + array
+in APPPATH\Models\BaseModel.php on line 28.
+ 1 APPPATH\Controllers\Dashboard\UserController.php(26): App\Models\BaseModel->get_errors()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\UserController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\UserController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(68): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

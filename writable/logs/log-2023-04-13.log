@@ -1,0 +1,421 @@
+CRITICAL - 2023-04-13 01:58:27 --> Too few arguments to function cookie(), 0 passed in D:\Xampp\htdocs\Codeigniter4\app\Libraries\lib_auth.php on line 16 and at least 1 expected
+in SYSTEMPATH\Common.php on line 230.
+ 1 APPPATH\Libraries\lib_auth.php(16): cookie()
+ 2 APPPATH\Filters\AuthFilters.php(14): App\Libraries\lib_auth->check()
+ 3 SYSTEMPATH\Filters\Filters.php(173): App\Filters\AuthFilters->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 4 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 02:20:29 --> Undefined constant "App\Models\DC_COOKIE_EXPIRY"
+in APPPATH\Models\UserModel.php on line 276.
+ 1 APPPATH\Controllers\LoginController.php(22): App\Models\UserModel->login([...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoginController->login_ajax()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 02:20:56 --> Undefined constant "App\Models\DC_COOKIE_EXPIRY"
+in APPPATH\Models\UserModel.php on line 274.
+ 1 APPPATH\Controllers\LoginController.php(22): App\Models\UserModel->login([...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoginController->login_ajax()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 02:20:58 --> Undefined constant "App\Models\DC_COOKIE_EXPIRY"
+in APPPATH\Models\UserModel.php on line 274.
+ 1 APPPATH\Controllers\LoginController.php(22): App\Models\UserModel->login([...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoginController->login_ajax()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 02:21:04 --> Undefined constant "App\Models\DC_COOKIE_EXPIRY"
+in APPPATH\Models\UserModel.php on line 274.
+ 1 APPPATH\Controllers\LoginController.php(22): App\Models\UserModel->login([...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\LoginController->login_ajax()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\LoginController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 02:30:21 --> syntax error, unexpected token "return"
+in APPPATH\Controllers\Dashboard\HomeController.php on line 16.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Dashboard\\HomeController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Dashboard\\HomeController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Dashboard\\HomeController')
+ 4 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\App\\Controllers\\Dashboard\\HomeController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 02:32:03 --> Call to undefined function App\Libraries\get_cookie()
+in APPPATH\Libraries\lib_auth.php on line 16.
+ 1 APPPATH\Filters\AuthFilters.php(19): App\Libraries\lib_auth->check()
+ 2 SYSTEMPATH\Filters\Filters.php(173): App\Filters\AuthFilters->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 07:07:42 --> Call to undefined function App\Libraries\get_cookie()
+in APPPATH\Libraries\lib_auth.php on line 17.
+ 1 APPPATH\Filters\AuthFilters.php(19): App\Libraries\lib_auth->check()
+ 2 SYSTEMPATH\Filters\Filters.php(173): App\Filters\AuthFilters->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('dashboard/user', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 07:15:46 --> Call to undefined function App\Libraries\direct()
+in APPPATH\Libraries\lib_auth.php on line 28.
+ 1 APPPATH\Controllers\Dashboard\HomeController.php(15): App\Libraries\lib_auth->logout()
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\HomeController->logout()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\HomeController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 07:17:12 --> Call to undefined function App\Controllers\Dashboard\direct()
+in APPPATH\Controllers\Dashboard\HomeController.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\HomeController->logout()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\HomeController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 07:17:13 --> Call to undefined function App\Controllers\Dashboard\direct()
+in APPPATH\Controllers\Dashboard\HomeController.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\HomeController->logout()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\HomeController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 08:03:56 --> Call to undefined function App\Models\getGroupIdParent()
+in APPPATH\Models\GroupModel.php on line 32.
+ 1 APPPATH\Controllers\Dashboard\GroupController.php(28): App\Models\GroupModel->getGroups([...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\GroupController->group_ajax()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\GroupController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 08:04:35 --> Call to undefined function App\Models\getGroupIdParent()
+in APPPATH\Models\GroupModel.php on line 32.
+ 1 APPPATH\Controllers\Dashboard\GroupController.php(28): App\Models\GroupModel->getGroups([...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\GroupController->group_ajax()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\GroupController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 08:05:16 --> Undefined variable $data
+in APPPATH\Controllers\Dashboard\GroupController.php on line 23.
+ 1 APPPATH\Controllers\Dashboard\GroupController.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Controllers\\Dashboard\\GroupController.php', 23)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\GroupController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\GroupController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 08:20:42 --> Array to string conversion
+in SYSTEMPATH\Database\Query.php on line 329.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'SYSTEMPATH\\Database\\Query.php', 329)
+ 2 SYSTEMPATH\Database\Query.php(329): implode(',', [...])
+ 3 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('SELECT count(*) as allcount
+FROM `groups`
+WHERE `group_parent` IN :group_parent:', [...])
+ 4 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 5 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\Query->getQuery()
+ 6 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT count(*) as allcount
+FROM `groups`
+WHERE `group_parent` IN :group_parent:', [...], false)
+ 7 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+ 8 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 9 APPPATH\Models\GroupModel.php(43): CodeIgniter\BaseModel->find()
+10 APPPATH\Controllers\Dashboard\GroupController.php(29): App\Models\GroupModel->getGroups([...])
+11 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\GroupController->group_ajax()
+12 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\GroupController))
+13 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 08:21:44 --> Array to string conversion
+in SYSTEMPATH\Database\Query.php on line 329.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'SYSTEMPATH\\Database\\Query.php', 329)
+ 2 SYSTEMPATH\Database\Query.php(329): implode(',', [...])
+ 3 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('SELECT count(*) as allcount
+FROM `groups`
+WHERE `group_id` IN :group_id:', [...])
+ 4 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 5 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\Query->getQuery()
+ 6 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT count(*) as allcount
+FROM `groups`
+WHERE `group_id` IN :group_id:', [...], false)
+ 7 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+ 8 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 9 APPPATH\Models\GroupModel.php(43): CodeIgniter\BaseModel->find()
+10 APPPATH\Controllers\Dashboard\GroupController.php(29): App\Models\GroupModel->getGroups([...])
+11 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\GroupController->group_ajax()
+12 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\GroupController))
+13 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 08:23:38 --> Array to string conversion
+in SYSTEMPATH\Database\Query.php on line 329.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'SYSTEMPATH\\Database\\Query.php', 329)
+ 2 SYSTEMPATH\Database\Query.php(329): implode(',', [...])
+ 3 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('SELECT count(*) as allcount
+FROM `groups`
+WHERE `group_id` IN :group_id:', [...])
+ 4 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 5 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\Query->getQuery()
+ 6 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT count(*) as allcount
+FROM `groups`
+WHERE `group_id` IN :group_id:', [...], false)
+ 7 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+ 8 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 9 APPPATH\Models\GroupModel.php(43): CodeIgniter\BaseModel->find()
+10 APPPATH\Controllers\Dashboard\GroupController.php(29): App\Models\GroupModel->getGroups([...])
+11 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\GroupController->group_ajax()
+12 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\GroupController))
+13 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 08:28:45 --> Array to string conversion
+in SYSTEMPATH\Database\Query.php on line 329.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'SYSTEMPATH\\Database\\Query.php', 329)
+ 2 SYSTEMPATH\Database\Query.php(329): implode(',', [...])
+ 3 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('SELECT count(*) as allcount
+FROM `groups`
+WHERE `group_id` IN :group_id:', [...])
+ 4 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 5 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\Query->getQuery()
+ 6 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT count(*) as allcount
+FROM `groups`
+WHERE `group_id` IN :group_id:', [...], false)
+ 7 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+ 8 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 9 APPPATH\Models\GroupModel.php(43): CodeIgniter\BaseModel->find()
+10 APPPATH\Controllers\Dashboard\GroupController.php(29): App\Models\GroupModel->getGroups([...])
+11 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\GroupController->group_ajax()
+12 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\GroupController))
+13 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 08:29:40 --> Trying to access array offset on value of type null
+in APPPATH\Models\GroupModel.php on line 34.
+ 1 APPPATH\Models\GroupModel.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Models\\GroupModel.php', 34)
+ 2 APPPATH\Controllers\Dashboard\GroupController.php(22): App\Models\GroupModel->getGroups()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\GroupController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\GroupController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 08:29:59 --> Array to string conversion
+in SYSTEMPATH\Database\Query.php on line 329.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'SYSTEMPATH\\Database\\Query.php', 329)
+ 2 SYSTEMPATH\Database\Query.php(329): implode(',', [...])
+ 3 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('SELECT count(*) as allcount
+FROM `groups`
+WHERE `group_id` IN :group_id:', [...])
+ 4 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 5 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\Query->getQuery()
+ 6 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT count(*) as allcount
+FROM `groups`
+WHERE `group_id` IN :group_id:', [...], false)
+ 7 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+ 8 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 9 APPPATH\Models\GroupModel.php(43): CodeIgniter\BaseModel->find()
+10 APPPATH\Controllers\Dashboard\GroupController.php(29): App\Models\GroupModel->getGroups([...])
+11 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\GroupController->group_ajax()
+12 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\GroupController))
+13 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 08:31:37 --> Array to string conversion
+in SYSTEMPATH\Database\Query.php on line 329.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'SYSTEMPATH\\Database\\Query.php', 329)
+ 2 SYSTEMPATH\Database\Query.php(329): implode(',', [...])
+ 3 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('SELECT count(*) as allcount
+FROM `groups`
+WHERE `group_id` IN :group_id:', [...])
+ 4 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 5 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\Query->getQuery()
+ 6 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT count(*) as allcount
+FROM `groups`
+WHERE `group_id` IN :group_id:', [...], false)
+ 7 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+ 8 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 9 APPPATH\Models\GroupModel.php(43): CodeIgniter\BaseModel->find()
+10 APPPATH\Controllers\Dashboard\GroupController.php(29): App\Models\GroupModel->getGroups([...])
+11 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\GroupController->group_ajax()
+12 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\GroupController))
+13 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 08:32:27 --> Array to string conversion
+in SYSTEMPATH\Database\Query.php on line 329.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'SYSTEMPATH\\Database\\Query.php', 329)
+ 2 SYSTEMPATH\Database\Query.php(329): implode(',', [...])
+ 3 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('SELECT count(*) as allcount
+FROM `groups`
+WHERE `group_id` IN :group_id:', [...])
+ 4 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 5 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\Query->getQuery()
+ 6 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT count(*) as allcount
+FROM `groups`
+WHERE `group_id` IN :group_id:', [...], false)
+ 7 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+ 8 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 9 APPPATH\Models\GroupModel.php(43): CodeIgniter\BaseModel->find()
+10 APPPATH\Controllers\Dashboard\GroupController.php(22): App\Models\GroupModel->getGroups()
+11 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\GroupController->index()
+12 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\GroupController))
+13 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 08:33:51 --> Array to string conversion
+in SYSTEMPATH\Database\Query.php on line 329.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'SYSTEMPATH\\Database\\Query.php', 329)
+ 2 SYSTEMPATH\Database\Query.php(329): implode(',', [...])
+ 3 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('SELECT count(*) as allcount
+FROM `groups`
+WHERE `group_id` IN :group_id:', [...])
+ 4 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 5 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\Query->getQuery()
+ 6 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT count(*) as allcount
+FROM `groups`
+WHERE `group_id` IN :group_id:', [...], false)
+ 7 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+ 8 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 9 APPPATH\Models\GroupModel.php(43): CodeIgniter\BaseModel->find()
+10 APPPATH\Controllers\Dashboard\GroupController.php(22): App\Models\GroupModel->getGroups()
+11 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\GroupController->index()
+12 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\GroupController))
+13 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 08:33:52 --> Array to string conversion
+in SYSTEMPATH\Database\Query.php on line 329.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'SYSTEMPATH\\Database\\Query.php', 329)
+ 2 SYSTEMPATH\Database\Query.php(329): implode(',', [...])
+ 3 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('SELECT count(*) as allcount
+FROM `groups`
+WHERE `group_id` IN :group_id:', [...])
+ 4 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 5 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\Query->getQuery()
+ 6 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT count(*) as allcount
+FROM `groups`
+WHERE `group_id` IN :group_id:', [...], false)
+ 7 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+ 8 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 9 APPPATH\Models\GroupModel.php(43): CodeIgniter\BaseModel->find()
+10 APPPATH\Controllers\Dashboard\GroupController.php(22): App\Models\GroupModel->getGroups()
+11 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\GroupController->index()
+12 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\GroupController))
+13 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 08:33:53 --> Array to string conversion
+in SYSTEMPATH\Database\Query.php on line 329.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'SYSTEMPATH\\Database\\Query.php', 329)
+ 2 SYSTEMPATH\Database\Query.php(329): implode(',', [...])
+ 3 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('SELECT count(*) as allcount
+FROM `groups`
+WHERE `group_id` IN :group_id:', [...])
+ 4 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 5 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\Query->getQuery()
+ 6 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT count(*) as allcount
+FROM `groups`
+WHERE `group_id` IN :group_id:', [...], false)
+ 7 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+ 8 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 9 APPPATH\Models\GroupModel.php(43): CodeIgniter\BaseModel->find()
+10 APPPATH\Controllers\Dashboard\GroupController.php(22): App\Models\GroupModel->getGroups()
+11 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\GroupController->index()
+12 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\GroupController))
+13 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 08:34:45 --> array_values(): Argument #1 ($array) must be of type array, string given
+in APPPATH\Controllers\Dashboard\GroupController.php on line 22.
+ 1 APPPATH\Controllers\Dashboard\GroupController.php(22): array_values('12')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\GroupController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\GroupController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 08:35:17 --> array_values(): Argument #1 ($array) must be of type array, string given
+in APPPATH\Controllers\Dashboard\GroupController.php on line 22.
+ 1 APPPATH\Controllers\Dashboard\GroupController.php(22): array_values('12')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\GroupController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\GroupController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 08:35:18 --> array_values(): Argument #1 ($array) must be of type array, string given
+in APPPATH\Controllers\Dashboard\GroupController.php on line 22.
+ 1 APPPATH\Controllers\Dashboard\GroupController.php(22): array_values('12')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\GroupController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\GroupController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 08:35:18 --> array_values(): Argument #1 ($array) must be of type array, string given
+in APPPATH\Controllers\Dashboard\GroupController.php on line 22.
+ 1 APPPATH\Controllers\Dashboard\GroupController.php(22): array_values('12')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\GroupController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\GroupController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 08:35:58 --> Array to string conversion
+in SYSTEMPATH\Database\Query.php on line 329.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'SYSTEMPATH\\Database\\Query.php', 329)
+ 2 SYSTEMPATH\Database\Query.php(329): implode(',', [...])
+ 3 SYSTEMPATH\Database\Query.php(310): CodeIgniter\Database\Query->matchNamedBinds('SELECT count(*) as allcount
+FROM `groups`
+WHERE `group_id` IN :group_id:', [...])
+ 4 SYSTEMPATH\Database\Query.php(159): CodeIgniter\Database\Query->compileBinds()
+ 5 SYSTEMPATH\Database\BaseConnection.php(605): CodeIgniter\Database\Query->getQuery()
+ 6 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT count(*) as allcount
+FROM `groups`
+WHERE `group_id` IN :group_id:', [...], false)
+ 7 SYSTEMPATH\Model.php(203): CodeIgniter\Database\BaseBuilder->get()
+ 8 SYSTEMPATH\BaseModel.php(557): CodeIgniter\Model->doFind(false, null)
+ 9 APPPATH\Models\GroupModel.php(43): CodeIgniter\BaseModel->find()
+10 APPPATH\Controllers\Dashboard\GroupController.php(22): App\Models\GroupModel->getGroups()
+11 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\GroupController->index()
+12 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\GroupController))
+13 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 08:36:34 --> Trying to access array offset on value of type null
+in APPPATH\Models\GroupModel.php on line 34.
+ 1 APPPATH\Models\GroupModel.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Models\\GroupModel.php', 34)
+ 2 APPPATH\Controllers\Dashboard\GroupController.php(22): App\Models\GroupModel->getGroups()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\GroupController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\GroupController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 08:36:36 --> Trying to access array offset on value of type null
+in APPPATH\Models\GroupModel.php on line 34.
+ 1 APPPATH\Models\GroupModel.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Models\\GroupModel.php', 34)
+ 2 APPPATH\Controllers\Dashboard\GroupController.php(22): App\Models\GroupModel->getGroups()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\GroupController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\GroupController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 08:36:37 --> Trying to access array offset on value of type null
+in APPPATH\Models\GroupModel.php on line 34.
+ 1 APPPATH\Models\GroupModel.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Models\\GroupModel.php', 34)
+ 2 APPPATH\Controllers\Dashboard\GroupController.php(22): App\Models\GroupModel->getGroups()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\GroupController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\GroupController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-13 08:36:37 --> Trying to access array offset on value of type null
+in APPPATH\Models\GroupModel.php on line 34.
+ 1 APPPATH\Models\GroupModel.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Models\\GroupModel.php', 34)
+ 2 APPPATH\Controllers\Dashboard\GroupController.php(22): App\Models\GroupModel->getGroups()
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\GroupController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\GroupController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

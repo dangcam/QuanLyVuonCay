@@ -1,0 +1,35 @@
+CRITICAL - 2023-05-08 02:06:08 --> Division by zero
+in APPPATH\Models\ReportGroupModel.php on line 77.
+ 1 APPPATH\Controllers\Dashboard\ReportGroupController.php(36): App\Models\ReportGroupModel->save_report_group([...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\ReportGroupController->save_report_group()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\ReportGroupController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:43:17 --> Undefined array key "value1_1"
+in APPPATH\Models\ReportGroupModel.php on line 95.
+ 1 APPPATH\Models\ReportGroupModel.php(95): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "value1_1"', 'APPPATH\\Models\\ReportGroupModel.php', 95)
+ 2 APPPATH\Controllers\Dashboard\ReportGroupController.php(36): App\Models\ReportGroupModel->save_report_group([...])
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\ReportGroupController->save_report_group()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\ReportGroupController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:43:55 --> Undefined array key "value1_1"
+in APPPATH\Models\ReportGroupModel.php on line 90.
+ 1 APPPATH\Models\ReportGroupModel.php(90): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "value1_1"', 'APPPATH\\Models\\ReportGroupModel.php', 90)
+ 2 APPPATH\Controllers\Dashboard\ReportGroupController.php(36): App\Models\ReportGroupModel->save_report_group([...])
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\ReportGroupController->save_report_group()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\ReportGroupController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-08 02:46:34 --> Undefined array key "value1_1"
+in APPPATH\Models\ReportGroupModel.php on line 90.
+ 1 APPPATH\Models\ReportGroupModel.php(90): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "value1_1"', 'APPPATH\\Models\\ReportGroupModel.php', 90)
+ 2 APPPATH\Controllers\Dashboard\ReportGroupController.php(36): App\Models\ReportGroupModel->save_report_group([...])
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\ReportGroupController->save_report_group()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\ReportGroupController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

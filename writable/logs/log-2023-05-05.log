@@ -1,0 +1,1168 @@
+ERROR - 2023-05-05 00:41:50 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\Xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 D:\Xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'qlbaocao', 3306, '', 0)
+#1 D:\Xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Xampp\htdocs\Codeigniter4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Xampp\htdocs\Codeigniter4\app\Libraries\lib_auth.php(38): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Xampp\htdocs\Codeigniter4\app\Libraries\lib_auth.php(13): App\Libraries\lib_auth->getFuntionUser(NULL)
+#6 D:\Xampp\htdocs\Codeigniter4\app\Controllers\BaseController.php(58): App\Libraries\lib_auth->__construct()
+#7 D:\Xampp\htdocs\Codeigniter4\system\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#8 D:\Xampp\htdocs\Codeigniter4\system\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+#9 D:\Xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Xampp\htdocs\Codeigniter4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Xampp\htdocs\Codeigniter4\system\Commands\Server\rewrite.php(47): require_once('D:\\Xampp\\htdocs...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\Xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 D:\Xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Xampp\htdocs\Codeigniter4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\Xampp\htdocs\Codeigniter4\app\Libraries\lib_auth.php(38): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Xampp\htdocs\Codeigniter4\app\Libraries\lib_auth.php(13): App\Libraries\lib_auth->getFuntionUser(NULL)
+#5 D:\Xampp\htdocs\Codeigniter4\app\Controllers\BaseController.php(58): App\Libraries\lib_auth->__construct()
+#6 D:\Xampp\htdocs\Codeigniter4\system\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#7 D:\Xampp\htdocs\Codeigniter4\system\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+#8 D:\Xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Xampp\htdocs\Codeigniter4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\Xampp\htdocs\Codeigniter4\system\Commands\Server\rewrite.php(47): require_once('D:\\Xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-05-05 00:41:50 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_function`
+WHERE `user_id` IS NULL', [], false)
+ 3 APPPATH\Libraries\lib_auth.php(38): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Libraries\lib_auth.php(13): App\Libraries\lib_auth->getFuntionUser(null)
+ 5 APPPATH\Controllers\BaseController.php(58): App\Libraries\lib_auth->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 7 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-05-05 01:13:10 --> mysqli_sql_exception: Duplicate column name 'row_id' in D:\Xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM \r...', 0)
+#1 D:\Xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM \r...')
+#2 D:\Xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM \r...')
+#3 D:\Xampp\htdocs\Codeigniter4\app\Models\ReportGroupModel.php(19): CodeIgniter\Database\BaseConnection->query('SELECT * FROM \r...', Array)
+#4 D:\Xampp\htdocs\Codeigniter4\app\Controllers\Dashboard\ReportGroupController.php(16): App\Models\ReportGroupModel->getListReportGroup(5, 2023, 'vpddt')
+#5 D:\Xampp\htdocs\Codeigniter4\system\CodeIgniter.php(934): App\Controllers\Dashboard\ReportGroupController->index()
+#6 D:\Xampp\htdocs\Codeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\ReportGroupController))
+#7 D:\Xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Xampp\htdocs\Codeigniter4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\Xampp\htdocs\Codeigniter4\system\Commands\Server\rewrite.php(47): require_once('D:\\Xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-05-05 01:13:10 --> Duplicate column name 'row_id'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Models\ReportGroupModel.php(19): CodeIgniter\Database\BaseConnection->query('SELECT * FROM 
+                (SELECT * FROM (SELECT * FROM report_group WHERE report_month = ? AND report_year = ? AND group_id = ?) AS RG 
+                RIGHT JOIN report_name ON report_name.row_id = RG.row_id) AS RGN ORDER BY row_number', [...])
+ 2 APPPATH\Controllers\Dashboard\ReportGroupController.php(16): App\Models\ReportGroupModel->getListReportGroup(5, 2023, 'vpddt')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\ReportGroupController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\ReportGroupController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-05-05 02:20:49 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AS GRN ORDER BY row_number' at line 2 in D:\Xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php(295): mysqli->query(' \r\n            ...', 0)
+#1 D:\Xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute(' \r\n            ...')
+#2 D:\Xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery(' \r\n            ...')
+#3 D:\Xampp\htdocs\Codeigniter4\app\Models\ReportGroupModel.php(19): CodeIgniter\Database\BaseConnection->query(' \r\n            ...', Array)
+#4 D:\Xampp\htdocs\Codeigniter4\app\Controllers\Dashboard\ReportGroupController.php(16): App\Models\ReportGroupModel->getListReportGroup(5, 2023, 'vpddt')
+#5 D:\Xampp\htdocs\Codeigniter4\system\CodeIgniter.php(934): App\Controllers\Dashboard\ReportGroupController->index()
+#6 D:\Xampp\htdocs\Codeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\ReportGroupController))
+#7 D:\Xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Xampp\htdocs\Codeigniter4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\Xampp\htdocs\Codeigniter4\system\Commands\Server\rewrite.php(47): require_once('D:\\Xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-05-05 02:20:49 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'AS GRN ORDER BY row_number' at line 2
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Models\ReportGroupModel.php(19): CodeIgniter\Database\BaseConnection->query(' 
+                (SELECT * FROM (SELECT * FROM report_group WHERE report_month = ? AND report_year = ? AND group_id = ?) AS RG 
+                RIGHT JOIN report_name ON report_name.row_id = RG.row_id) AS GRN ORDER BY row_number', [...])
+ 2 APPPATH\Controllers\Dashboard\ReportGroupController.php(16): App\Models\ReportGroupModel->getListReportGroup(5, 2023, 'vpddt')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\ReportGroupController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\ReportGroupController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-05-05 02:21:13 --> mysqli_sql_exception: Duplicate column name 'row_id' in D:\Xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM \r...', 0)
+#1 D:\Xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM \r...')
+#2 D:\Xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM \r...')
+#3 D:\Xampp\htdocs\Codeigniter4\app\Models\ReportGroupModel.php(19): CodeIgniter\Database\BaseConnection->query('SELECT * FROM \r...', Array)
+#4 D:\Xampp\htdocs\Codeigniter4\app\Controllers\Dashboard\ReportGroupController.php(16): App\Models\ReportGroupModel->getListReportGroup(5, 2023, 'vpddt')
+#5 D:\Xampp\htdocs\Codeigniter4\system\CodeIgniter.php(934): App\Controllers\Dashboard\ReportGroupController->index()
+#6 D:\Xampp\htdocs\Codeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\ReportGroupController))
+#7 D:\Xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Xampp\htdocs\Codeigniter4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\Xampp\htdocs\Codeigniter4\system\Commands\Server\rewrite.php(47): require_once('D:\\Xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-05-05 02:21:13 --> Duplicate column name 'row_id'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Models\ReportGroupModel.php(19): CodeIgniter\Database\BaseConnection->query('SELECT * FROM 
+                (SELECT * FROM (SELECT * FROM report_group WHERE report_month = ? AND report_year = ? AND group_id = ?) AS RG 
+                RIGHT JOIN report_name ON report_name.row_id = RG.row_id) AS GRN ORDER BY row_number', [...])
+ 2 APPPATH\Controllers\Dashboard\ReportGroupController.php(16): App\Models\ReportGroupModel->getListReportGroup(5, 2023, 'vpddt')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\ReportGroupController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\ReportGroupController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-05-05 02:25:00 --> mysqli_sql_exception: Column 'row_id' in field list is ambiguous in D:\Xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM \r...', 0)
+#1 D:\Xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM \r...')
+#2 D:\Xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM \r...')
+#3 D:\Xampp\htdocs\Codeigniter4\app\Models\ReportGroupModel.php(22): CodeIgniter\Database\BaseConnection->query('SELECT * FROM \r...', Array)
+#4 D:\Xampp\htdocs\Codeigniter4\app\Controllers\Dashboard\ReportGroupController.php(16): App\Models\ReportGroupModel->getListReportGroup(5, 2023, 'vpddt')
+#5 D:\Xampp\htdocs\Codeigniter4\system\CodeIgniter.php(934): App\Controllers\Dashboard\ReportGroupController->index()
+#6 D:\Xampp\htdocs\Codeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\ReportGroupController))
+#7 D:\Xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Xampp\htdocs\Codeigniter4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\Xampp\htdocs\Codeigniter4\system\Commands\Server\rewrite.php(47): require_once('D:\\Xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-05-05 02:25:00 --> Column 'row_id' in field list is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Models\ReportGroupModel.php(22): CodeIgniter\Database\BaseConnection->query('SELECT * FROM 
+                (SELECT report_name.row_id, row_name, row_parent, row_number, report_month, report_year,
+                        group_id, row_id, value1_1, value1_2, value1_3, value1_total, value2_total,
+                        value2_1, value2_2, value2_per, value3_total, value3_1, value3_2, value3_per
+                    FROM (SELECT * FROM report_group WHERE report_month = ? AND report_year = ? AND group_id = ?) AS RG 
+                RIGHT JOIN report_name ON report_name.row_id = RG.row_id) AS GRN ORDER BY row_number', [...])
+ 2 APPPATH\Controllers\Dashboard\ReportGroupController.php(16): App\Models\ReportGroupModel->getListReportGroup(5, 2023, 'vpddt')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\ReportGroupController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\ReportGroupController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-05-05 02:25:03 --> mysqli_sql_exception: Column 'row_id' in field list is ambiguous in D:\Xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\Xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT * FROM \r...', 0)
+#1 D:\Xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM \r...')
+#2 D:\Xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM \r...')
+#3 D:\Xampp\htdocs\Codeigniter4\app\Models\ReportGroupModel.php(22): CodeIgniter\Database\BaseConnection->query('SELECT * FROM \r...', Array)
+#4 D:\Xampp\htdocs\Codeigniter4\app\Controllers\Dashboard\ReportGroupController.php(16): App\Models\ReportGroupModel->getListReportGroup(5, 2023, 'vpddt')
+#5 D:\Xampp\htdocs\Codeigniter4\system\CodeIgniter.php(934): App\Controllers\Dashboard\ReportGroupController->index()
+#6 D:\Xampp\htdocs\Codeigniter4\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\ReportGroupController))
+#7 D:\Xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 D:\Xampp\htdocs\Codeigniter4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 D:\Xampp\htdocs\Codeigniter4\system\Commands\Server\rewrite.php(47): require_once('D:\\Xampp\\htdocs...')
+#10 {main}
+CRITICAL - 2023-05-05 02:25:03 --> Column 'row_id' in field list is ambiguous
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 APPPATH\Models\ReportGroupModel.php(22): CodeIgniter\Database\BaseConnection->query('SELECT * FROM 
+                (SELECT report_name.row_id, row_name, row_parent, row_number, report_month, report_year,
+                        group_id, row_id, value1_1, value1_2, value1_3, value1_total, value2_total,
+                        value2_1, value2_2, value2_per, value3_total, value3_1, value3_2, value3_per
+                    FROM (SELECT * FROM report_group WHERE report_month = ? AND report_year = ? AND group_id = ?) AS RG 
+                RIGHT JOIN report_name ON report_name.row_id = RG.row_id) AS GRN ORDER BY row_number', [...])
+ 2 APPPATH\Controllers\Dashboard\ReportGroupController.php(16): App\Models\ReportGroupModel->getListReportGroup(5, 2023, 'vpddt')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\ReportGroupController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\ReportGroupController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-05-05 02:25:28 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\Xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 D:\Xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'qlbaocao', 3306, '', 0)
+#1 D:\Xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Xampp\htdocs\Codeigniter4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Xampp\htdocs\Codeigniter4\app\Libraries\lib_auth.php(38): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Xampp\htdocs\Codeigniter4\app\Libraries\lib_auth.php(13): App\Libraries\lib_auth->getFuntionUser('admin')
+#6 D:\Xampp\htdocs\Codeigniter4\app\Filters\AuthFilters.php(13): App\Libraries\lib_auth->__construct()
+#7 D:\Xampp\htdocs\Codeigniter4\system\Filters\Filters.php(166): App\Filters\AuthFilters->__construct()
+#8 D:\Xampp\htdocs\Codeigniter4\system\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('dashboard/repor...', 'before')
+#9 D:\Xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Xampp\htdocs\Codeigniter4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Xampp\htdocs\Codeigniter4\system\Commands\Server\rewrite.php(47): require_once('D:\\Xampp\\htdocs...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\Xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 D:\Xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Xampp\htdocs\Codeigniter4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\Xampp\htdocs\Codeigniter4\app\Libraries\lib_auth.php(38): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Xampp\htdocs\Codeigniter4\app\Libraries\lib_auth.php(13): App\Libraries\lib_auth->getFuntionUser('admin')
+#5 D:\Xampp\htdocs\Codeigniter4\app\Filters\AuthFilters.php(13): App\Libraries\lib_auth->__construct()
+#6 D:\Xampp\htdocs\Codeigniter4\system\Filters\Filters.php(166): App\Filters\AuthFilters->__construct()
+#7 D:\Xampp\htdocs\Codeigniter4\system\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('dashboard/repor...', 'before')
+#8 D:\Xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Xampp\htdocs\Codeigniter4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\Xampp\htdocs\Codeigniter4\system\Commands\Server\rewrite.php(47): require_once('D:\\Xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-05-05 02:25:28 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_function`
+WHERE `user_id` = :user_id:', [...], false)
+ 3 APPPATH\Libraries\lib_auth.php(38): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Libraries\lib_auth.php(13): App\Libraries\lib_auth->getFuntionUser('admin')
+ 5 APPPATH\Filters\AuthFilters.php(13): App\Libraries\lib_auth->__construct()
+ 6 SYSTEMPATH\Filters\Filters.php(166): App\Filters\AuthFilters->__construct()
+ 7 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('dashboard/report_group', 'before')
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-05-05 02:26:23 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\Xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 D:\Xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'qlbaocao', 3306, '', 0)
+#1 D:\Xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Xampp\htdocs\Codeigniter4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Xampp\htdocs\Codeigniter4\app\Libraries\lib_auth.php(38): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Xampp\htdocs\Codeigniter4\app\Libraries\lib_auth.php(13): App\Libraries\lib_auth->getFuntionUser('admin')
+#6 D:\Xampp\htdocs\Codeigniter4\app\Filters\AuthFilters.php(13): App\Libraries\lib_auth->__construct()
+#7 D:\Xampp\htdocs\Codeigniter4\system\Filters\Filters.php(166): App\Filters\AuthFilters->__construct()
+#8 D:\Xampp\htdocs\Codeigniter4\system\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('dashboard/repor...', 'before')
+#9 D:\Xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Xampp\htdocs\Codeigniter4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Xampp\htdocs\Codeigniter4\system\Commands\Server\rewrite.php(47): require_once('D:\\Xampp\\htdocs...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\Xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 D:\Xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Xampp\htdocs\Codeigniter4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\Xampp\htdocs\Codeigniter4\app\Libraries\lib_auth.php(38): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Xampp\htdocs\Codeigniter4\app\Libraries\lib_auth.php(13): App\Libraries\lib_auth->getFuntionUser('admin')
+#5 D:\Xampp\htdocs\Codeigniter4\app\Filters\AuthFilters.php(13): App\Libraries\lib_auth->__construct()
+#6 D:\Xampp\htdocs\Codeigniter4\system\Filters\Filters.php(166): App\Filters\AuthFilters->__construct()
+#7 D:\Xampp\htdocs\Codeigniter4\system\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('dashboard/repor...', 'before')
+#8 D:\Xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Xampp\htdocs\Codeigniter4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\Xampp\htdocs\Codeigniter4\system\Commands\Server\rewrite.php(47): require_once('D:\\Xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-05-05 02:26:23 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_function`
+WHERE `user_id` = :user_id:', [...], false)
+ 3 APPPATH\Libraries\lib_auth.php(38): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Libraries\lib_auth.php(13): App\Libraries\lib_auth->getFuntionUser('admin')
+ 5 APPPATH\Filters\AuthFilters.php(13): App\Libraries\lib_auth->__construct()
+ 6 SYSTEMPATH\Filters\Filters.php(166): App\Filters\AuthFilters->__construct()
+ 7 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('dashboard/report_group', 'before')
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-05-05 02:26:58 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\Xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 D:\Xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'qlbaocao', 3306, '', 0)
+#1 D:\Xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Xampp\htdocs\Codeigniter4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Xampp\htdocs\Codeigniter4\app\Libraries\lib_auth.php(38): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Xampp\htdocs\Codeigniter4\app\Libraries\lib_auth.php(13): App\Libraries\lib_auth->getFuntionUser('admin')
+#6 D:\Xampp\htdocs\Codeigniter4\app\Filters\AuthFilters.php(13): App\Libraries\lib_auth->__construct()
+#7 D:\Xampp\htdocs\Codeigniter4\system\Filters\Filters.php(166): App\Filters\AuthFilters->__construct()
+#8 D:\Xampp\htdocs\Codeigniter4\system\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+#9 D:\Xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Xampp\htdocs\Codeigniter4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Xampp\htdocs\Codeigniter4\system\Commands\Server\rewrite.php(47): require_once('D:\\Xampp\\htdocs...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\Xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 D:\Xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Xampp\htdocs\Codeigniter4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\Xampp\htdocs\Codeigniter4\app\Libraries\lib_auth.php(38): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Xampp\htdocs\Codeigniter4\app\Libraries\lib_auth.php(13): App\Libraries\lib_auth->getFuntionUser('admin')
+#5 D:\Xampp\htdocs\Codeigniter4\app\Filters\AuthFilters.php(13): App\Libraries\lib_auth->__construct()
+#6 D:\Xampp\htdocs\Codeigniter4\system\Filters\Filters.php(166): App\Filters\AuthFilters->__construct()
+#7 D:\Xampp\htdocs\Codeigniter4\system\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+#8 D:\Xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Xampp\htdocs\Codeigniter4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\Xampp\htdocs\Codeigniter4\system\Commands\Server\rewrite.php(47): require_once('D:\\Xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-05-05 02:26:58 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_function`
+WHERE `user_id` = :user_id:', [...], false)
+ 3 APPPATH\Libraries\lib_auth.php(38): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Libraries\lib_auth.php(13): App\Libraries\lib_auth->getFuntionUser('admin')
+ 5 APPPATH\Filters\AuthFilters.php(13): App\Libraries\lib_auth->__construct()
+ 6 SYSTEMPATH\Filters\Filters.php(166): App\Filters\AuthFilters->__construct()
+ 7 SYSTEMPATH\CodeIgniter.php(473): CodeIgniter\Filters\Filters->run('dashboard', 'before')
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-05-05 02:57:45 --> Allowed memory size of 536870912 bytes exhausted (tried to allocate 266354688 bytes)
+in APPPATH\Views\dashboard\report_group_view.php on line 26.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-05-05 03:00:39 --> Allowed memory size of 536870912 bytes exhausted (tried to allocate 266354688 bytes)
+in APPPATH\Views\dashboard\report_group_view.php on line 28.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-05-05 03:01:44 --> Allowed memory size of 536870912 bytes exhausted (tried to allocate 266354688 bytes)
+in APPPATH\Views\dashboard\report_group_view.php on line 28.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-05-05 07:00:44 --> array_values(): Argument #1 ($array) must be of type array, string given
+in APPPATH\Controllers\Dashboard\ReportGroupController.php on line 26.
+ 1 APPPATH\Controllers\Dashboard\ReportGroupController.php(26): array_values('<tr ><th>I</th><th>Thuộc thẩm quyền của UBND cấp huyện
+                            <input type="hidden" name="data[1][row_id]" value="I">
+                          </th><th><input type="number" name="data[1][value1_1]" value="" class="form-control"></th>
+                          <th><input type="number" name="data[1][value1_2]" value="" class="form-control"></th>
+                          <th><input type="number" name="data[1][value1_3]" value="" class="form-control"></th>
+                          <th><input type="number" name="data[1][value1_total]" value="" class="form-control"></th>
+                          <th><input type="number" name="data[1][value2_total]" value="" class="form-control"></th>
+                          <th><input type="number" name="data[1][value2_1]" value="" class="form-control"></th>
+                          <th><input type="number" name="data[1][value2_2]" value="" class="form-control"></th>
+                          <th><input type="text" name="data[1][value2_per]" value="" class="form-control"></th>
+                          <th><input type="number" name="data[1][value3_total]" value="" class="form-control"></th>
+                          <th><input type="number" name="data[1][value3_1]" value="" class="form-control"></th>
+                          <th><input type="number" name="data[1][value3_2]" value="" class="form-control"></th>
+                          <th><input type="text" name="data[1][value3_per]" value="" class="form-control"></th></tr><tr ><td>1</td><td>Giao đất
+                            <input type="hidden" name="data[2][row_id]" value="I.1">
+                          </td><td><input type="number" name="data[2][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[2][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[2][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[2][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[2][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[2][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[2][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[2][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[2][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[2][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[2][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[2][value3_per]" value="" class="form-control"></td></tr><tr ><td>2</td><td>Cho thuê đất 
+                            <input type="hidden" name="data[3][row_id]" value="I.2">
+                          </td><td><input type="number" name="data[3][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[3][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[3][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[3][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[3][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[3][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[3][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[3][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[3][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[3][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[3][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[3][value3_per]" value="" class="form-control"></td></tr><tr ><td>3</td><td>Bán tài sản gắn liền với QSDĐ
+                            <input type="hidden" name="data[4][row_id]" value="I.3">
+                          </td><td><input type="number" name="data[4][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[4][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[4][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[4][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[4][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[4][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[4][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[4][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[4][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[4][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[4][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[4][value3_per]" value="" class="form-control"></td></tr><tr ><td>4</td><td>Công nhận QSDĐ lần đầu
+                            <input type="hidden" name="data[5][row_id]" value="I.4">
+                          </td><td><input type="number" name="data[5][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[5][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[5][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[5][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[5][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[5][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[5][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[5][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[5][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[5][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[5][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[5][value3_per]" value="" class="form-control"></td></tr><tr ><td>5</td><td>Chuyển mục đích phải xin phép
+                            <input type="hidden" name="data[6][row_id]" value="I.5">
+                          </td><td><input type="number" name="data[6][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[6][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[6][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[6][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[6][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[6][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[6][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[6][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[6][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[6][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[6][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[6][value3_per]" value="" class="form-control"></td></tr><tr ><td>6</td><td>Đính chính GCN
+                            <input type="hidden" name="data[7][row_id]" value="I.6">
+                          </td><td><input type="number" name="data[7][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[7][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[7][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[7][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[7][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[7][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[7][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[7][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[7][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[7][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[7][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[7][value3_per]" value="" class="form-control"></td></tr><tr ><td>7</td><td>Thu hồi GCN
+                            <input type="hidden" name="data[8][row_id]" value="I.7">
+                          </td><td><input type="number" name="data[8][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[8][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[8][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[8][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[8][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[8][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[8][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[8][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[8][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[8][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[8][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[8][value3_per]" value="" class="form-control"></td></tr><tr ><td>8</td><td>Hồ sơ khác
+                            <input type="hidden" name="data[9][row_id]" value="I.8">
+                          </td><td><input type="number" name="data[9][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[9][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[9][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[9][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[9][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[9][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[9][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[9][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[9][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[9][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[9][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[9][value3_per]" value="" class="form-control"></td></tr><tr ><th>II</th><th>Thuộc thẩm quyền của Chi nhánh
+                            <input type="hidden" name="data[10][row_id]" value="II">
+                          </th><th><input type="number" name="data[10][value1_1]" value="" class="form-control"></th>
+                          <th><input type="number" name="data[10][value1_2]" value="" class="form-control"></th>
+                          <th><input type="number" name="data[10][value1_3]" value="" class="form-control"></th>
+                          <th><input type="number" name="data[10][value1_total]" value="" class="form-control"></th>
+                          <th><input type="number" name="data[10][value2_total]" value="" class="form-control"></th>
+                          <th><input type="number" name="data[10][value2_1]" value="" class="form-control"></th>
+                          <th><input type="number" name="data[10][value2_2]" value="" class="form-control"></th>
+                          <th><input type="text" name="data[10][value2_per]" value="" class="form-control"></th>
+                          <th><input type="number" name="data[10][value3_total]" value="" class="form-control"></th>
+                          <th><input type="number" name="data[10][value3_1]" value="" class="form-control"></th>
+                          <th><input type="number" name="data[10][value3_2]" value="" class="form-control"></th>
+                          <th><input type="text" name="data[10][value3_per]" value="" class="form-control"></th></tr><tr ><td>1</td><td>Cho thuê, cho thuê lại QSD đất
+                            <input type="hidden" name="data[11][row_id]" value="II.1">
+                          </td><td><input type="number" name="data[11][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[11][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[11][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[11][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[11][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[11][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[11][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[11][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[11][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[11][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[11][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[11][value3_per]" value="" class="form-control"></td></tr><tr ><td>2</td><td>Xóa đăng ký cho thuê, cho thuê lại
+                            <input type="hidden" name="data[12][row_id]" value="II.2">
+                          </td><td><input type="number" name="data[12][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[12][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[12][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[12][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[12][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[12][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[12][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[12][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[12][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[12][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[12][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[12][value3_per]" value="" class="form-control"></td></tr><tr ><td>3</td><td>Thế chấp hoặc thay đổi nội dung thế chấp
+                            <input type="hidden" name="data[13][row_id]" value="II.3">
+                          </td><td><input type="number" name="data[13][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[13][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[13][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[13][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[13][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[13][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[13][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[13][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[13][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[13][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[13][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[13][value3_per]" value="" class="form-control"></td></tr><tr ><td>4</td><td>Xóa đăng ký thế chấp
+                            <input type="hidden" name="data[14][row_id]" value="II.4">
+                          </td><td><input type="number" name="data[14][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[14][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[14][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[14][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[14][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[14][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[14][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[14][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[14][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[14][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[14][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[14][value3_per]" value="" class="form-control"></td></tr><tr ><td>5</td><td>Chuyển đổi QSD đất
+                            <input type="hidden" name="data[15][row_id]" value="II.5">
+                          </td><td><input type="number" name="data[15][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[15][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[15][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[15][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[15][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[15][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[15][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[15][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[15][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[15][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[15][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[15][value3_per]" value="" class="form-control"></td></tr><tr ><td>6</td><td>Chuyển nhượng
+                            <input type="hidden" name="data[16][row_id]" value="II.6">
+                          </td><td><input type="number" name="data[16][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[16][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[16][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[16][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[16][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[16][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[16][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[16][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[16][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[16][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[16][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[16][value3_per]" value="" class="form-control"></td></tr><tr ><td>7</td><td>Thừa kế
+                            <input type="hidden" name="data[17][row_id]" value="II.7">
+                          </td><td><input type="number" name="data[17][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[17][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[17][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[17][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[17][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[17][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[17][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[17][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[17][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[17][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[17][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[17][value3_per]" value="" class="form-control"></td></tr><tr ><td>8</td><td>Tặng cho
+                            <input type="hidden" name="data[18][row_id]" value="II.8">
+                          </td><td><input type="number" name="data[18][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[18][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[18][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[18][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[18][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[18][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[18][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[18][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[18][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[18][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[18][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[18][value3_per]" value="" class="form-control"></td></tr><tr ><td>9</td><td>Góp vốn bằng QSDĐ
+                            <input type="hidden" name="data[19][row_id]" value="II.9">
+                          </td><td><input type="number" name="data[19][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[19][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[19][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[19][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[19][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[19][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[19][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[19][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[19][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[19][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[19][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[19][value3_per]" value="" class="form-control"></td></tr><tr ><td>10</td><td>Xóa đăng ký góp vốn bằng QSDĐ
+                            <input type="hidden" name="data[20][row_id]" value="II.10">
+                          </td><td><input type="number" name="data[20][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[20][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[20][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[20][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[20][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[20][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[20][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[20][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[20][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[20][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[20][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[20][value3_per]" value="" class="form-control"></td></tr><tr ><td>11</td><td>Chuyển QSD đất (theo kết quả giải quyết tranh chấp)
+                            <input type="hidden" name="data[21][row_id]" value="II.11">
+                          </td><td><input type="number" name="data[21][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[21][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[21][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[21][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[21][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[21][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[21][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[21][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[21][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[21][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[21][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[21][value3_per]" value="" class="form-control"></td></tr><tr ><td>12</td><td>Chuyển QSD đất (theo quyết định giải quyết khiếu nại, tố cáo về đất đai)
+                            <input type="hidden" name="data[22][row_id]" value="II.12">
+                          </td><td><input type="number" name="data[22][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[22][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[22][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[22][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[22][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[22][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[22][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[22][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[22][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[22][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[22][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[22][value3_per]" value="" class="form-control"></td></tr><tr ><td>13</td><td>Chuyển QSD đất (theo bản án, quyết định của tòa án, quyết định của cơ quan thi hành án)
+                            <input type="hidden" name="data[23][row_id]" value="II.13">
+                          </td><td><input type="number" name="data[23][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[23][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[23][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[23][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[23][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[23][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[23][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[23][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[23][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[23][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[23][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[23][value3_per]" value="" class="form-control"></td></tr><tr ><td>14</td><td>Chuyển QSD đất (theo kết quả đấu giá đất)
+                            <input type="hidden" name="data[24][row_id]" value="II.14">
+                          </td><td><input type="number" name="data[24][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[24][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[24][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[24][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[24][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[24][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[24][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[24][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[24][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[24][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[24][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[24][value3_per]" value="" class="form-control"></td></tr><tr ><td>15</td><td>Hợp nhất hoặc phân chia QSD đất
+                            <input type="hidden" name="data[25][row_id]" value="II.15">
+                          </td><td><input type="number" name="data[25][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[25][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[25][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[25][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[25][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[25][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[25][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[25][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[25][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[25][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[25][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[25][value3_per]" value="" class="form-control"></td></tr><tr ><td>16</td><td>Thay đổi thông tin người sử dụng đất, chủ sở hữu tài sản gắn liền với đất (tên, giấy tờ pháp nhân, n
+                            <input type="hidden" name="data[26][row_id]" value="II.16">
+                          </td><td><input type="number" name="data[26][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[26][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[26][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[26][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[26][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[26][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[26][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[26][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[26][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[26][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[26][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[26][value3_per]" value="" class="form-control"></td></tr><tr ><td>17</td><td>Xác lập hoặc thay đổi, chấm dứt quyền sử dụng hạn chế thửa đất liền kề
+                            <input type="hidden" name="data[27][row_id]" value="II.17">
+                          </td><td><input type="number" name="data[27][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[27][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[27][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[27][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[27][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[27][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[27][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[27][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[27][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[27][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[27][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[27][value3_per]" value="" class="form-control"></td></tr><tr ><td>18</td><td>Thay đổi diện tích do sạt lở tự nhiên một phần thửa đất
+                            <input type="hidden" name="data[28][row_id]" value="II.18">
+                          </td><td><input type="number" name="data[28][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[28][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[28][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[28][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[28][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[28][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[28][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[28][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[28][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[28][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[28][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[28][value3_per]" value="" class="form-control"></td></tr><tr ><td>19</td><td>Chuyển mục đích không
+                            <input type="hidden" name="data[29][row_id]" value="II.19">
+                          </td><td><input type="number" name="data[29][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[29][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[29][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[29][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[29][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[29][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[29][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[29][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[29][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[29][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[29][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[29][value3_per]" value="" class="form-control"></td></tr><tr ><td>20</td><td>Gia hạn sử dụng đất
+                            <input type="hidden" name="data[30][row_id]" value="II.20">
+                          </td><td><input type="number" name="data[30][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[30][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[30][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[30][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[30][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[30][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[30][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[30][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[30][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[30][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[30][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[30][value3_per]" value="" class="form-control"></td></tr><tr ><td>21</td><td>Chuyển hình thức giao đất, thuê đất
+                            <input type="hidden" name="data[31][row_id]" value="II.21">
+                          </td><td><input type="number" name="data[31][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[31][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[31][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[31][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[31][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[31][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[31][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[31][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[31][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[31][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[31][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[31][value3_per]" value="" class="form-control"></td></tr><tr ><td>22</td><td>Thay đổi thông tin về tài sản gắn liền với đất
+                            <input type="hidden" name="data[32][row_id]" value="II.22">
+                          </td><td><input type="number" name="data[32][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[32][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[32][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[32][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[32][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[32][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[32][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[32][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[32][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[32][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[32][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[32][value3_per]" value="" class="form-control"></td></tr><tr ><td>23</td><td>Có thay đổi đối với những hạn chế về QSD đất, tài sản gắn liền với đất
+                            <input type="hidden" name="data[33][row_id]" value="II.23">
+                          </td><td><input type="number" name="data[33][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[33][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[33][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[33][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[33][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[33][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[33][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[33][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[33][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[33][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[33][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[33][value3_per]" value="" class="form-control"></td></tr><tr ><td>24</td><td>Phát hiện sai sót, nhầm lẫn về nội dung thông tin trong hồ sơ địa chính và GCN QSD đất 
+                            <input type="hidden" name="data[34][row_id]" value="II.24">
+                          </td><td><input type="number" name="data[34][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[34][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[34][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[34][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[34][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[34][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[34][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[34][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[34][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[34][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[34][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[34][value3_per]" value="" class="form-control"></td></tr><tr ><td>25</td><td>Thay đổi, điều chỉnh tên đơn vị, địa giới hành chính theo QĐ của cơ quan có thẩm quyền
+                            <input type="hidden" name="data[35][row_id]" value="II.25">
+                          </td><td><input type="number" name="data[35][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[35][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[35][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[35][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[35][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[35][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[35][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[35][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[35][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[35][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[35][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[35][value3_per]" value="" class="form-control"></td></tr><tr ><td>26</td><td>Hồ sơ khác
+                            <input type="hidden" name="data[36][row_id]" value="II.26">
+                          </td><td><input type="number" name="data[36][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[36][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[36][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[36][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[36][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[36][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[36][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[36][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[36][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[36][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[36][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[36][value3_per]" value="" class="form-control"></td></tr><tr ><th>III</th><th>Thuộc thẩm quyền của Sở Tài nguyên và Môi trường
+                            <input type="hidden" name="data[37][row_id]" value="III">
+                          </th><th><input type="number" name="data[37][value1_1]" value="" class="form-control"></th>
+                          <th><input type="number" name="data[37][value1_2]" value="" class="form-control"></th>
+                          <th><input type="number" name="data[37][value1_3]" value="" class="form-control"></th>
+                          <th><input type="number" name="data[37][value1_total]" value="" class="form-control"></th>
+                          <th><input type="number" name="data[37][value2_total]" value="" class="form-control"></th>
+                          <th><input type="number" name="data[37][value2_1]" value="" class="form-control"></th>
+                          <th><input type="number" name="data[37][value2_2]" value="" class="form-control"></th>
+                          <th><input type="text" name="data[37][value2_per]" value="" class="form-control"></th>
+                          <th><input type="number" name="data[37][value3_total]" value="" class="form-control"></th>
+                          <th><input type="number" name="data[37][value3_1]" value="" class="form-control"></th>
+                          <th><input type="number" name="data[37][value3_2]" value="" class="form-control"></th>
+                          <th><input type="text" name="data[37][value3_per]" value="" class="form-control"></th></tr><tr ><td>1</td><td>Cho thuê, cho thuê lại QSD đất
+                            <input type="hidden" name="data[38][row_id]" value="III.1">
+                          </td><td><input type="number" name="data[38][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[38][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[38][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[38][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[38][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[38][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[38][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[38][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[38][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[38][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[38][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[38][value3_per]" value="" class="form-control"></td></tr><tr ><td>2</td><td>Chuyển đổi QSD đất
+                            <input type="hidden" name="data[39][row_id]" value="III.2">
+                          </td><td><input type="number" name="data[39][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[39][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[39][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[39][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[39][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[39][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[39][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[39][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[39][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[39][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[39][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[39][value3_per]" value="" class="form-control"></td></tr><tr ><td>3</td><td>Chuyển nhượng
+                            <input type="hidden" name="data[40][row_id]" value="III.3">
+                          </td><td><input type="number" name="data[40][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[40][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[40][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[40][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[40][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[40][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[40][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[40][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[40][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[40][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[40][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[40][value3_per]" value="" class="form-control"></td></tr><tr ><td>4</td><td>Thừa kế
+                            <input type="hidden" name="data[41][row_id]" value="III.4">
+                          </td><td><input type="number" name="data[41][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[41][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[41][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[41][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[41][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[41][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[41][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[41][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[41][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[41][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[41][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[41][value3_per]" value="" class="form-control"></td></tr><tr ><td>5</td><td>Tặng cho
+                            <input type="hidden" name="data[42][row_id]" value="III.5">
+                          </td><td><input type="number" name="data[42][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[42][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[42][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[42][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[42][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[42][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[42][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[42][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[42][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[42][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[42][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[42][value3_per]" value="" class="form-control"></td></tr><tr ><td>6</td><td>Góp vốn bằng QSDĐ
+                            <input type="hidden" name="data[43][row_id]" value="III.6">
+                          </td><td><input type="number" name="data[43][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[43][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[43][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[43][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[43][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[43][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[43][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[43][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[43][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[43][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[43][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[43][value3_per]" value="" class="form-control"></td></tr><tr ><td>7</td><td>Xóa đăng ký góp vốn bằng QSDĐ
+                            <input type="hidden" name="data[44][row_id]" value="III.7">
+                          </td><td><input type="number" name="data[44][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[44][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[44][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[44][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[44][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[44][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[44][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[44][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[44][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[44][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[44][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[44][value3_per]" value="" class="form-control"></td></tr><tr ><td>8</td><td>Chuyển QSD đất (theo thỏa thuận xử lý nợ thế chấp)
+                            <input type="hidden" name="data[45][row_id]" value="III.8">
+                          </td><td><input type="number" name="data[45][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[45][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[45][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[45][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[45][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[45][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[45][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[45][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[45][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[45][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[45][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[45][value3_per]" value="" class="form-control"></td></tr><tr ><td>9</td><td>Chuyển quyền theo kết quả giải quyết tranh chấp
+                            <input type="hidden" name="data[46][row_id]" value="III.9">
+                          </td><td><input type="number" name="data[46][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[46][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[46][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[46][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[46][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[46][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[46][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[46][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[46][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[46][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[46][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[46][value3_per]" value="" class="form-control"></td></tr><tr ><td>10</td><td>Chuyển QSD đất (theo quyết định giải quyết khiếu nại, tố cáo về đất đai)
+                            <input type="hidden" name="data[47][row_id]" value="III.10">
+                          </td><td><input type="number" name="data[47][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[47][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[47][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[47][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[47][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[47][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[47][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[47][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[47][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[47][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[47][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[47][value3_per]" value="" class="form-control"></td></tr><tr ><td>11</td><td>Chuyển QSD đất (theo bản án, quyết định của tòa án, quyết định của cơ quan thi hành án)
+                            <input type="hidden" name="data[48][row_id]" value="III.11">
+                          </td><td><input type="number" name="data[48][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[48][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[48][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[48][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[48][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[48][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[48][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[48][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[48][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[48][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[48][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[48][value3_per]" value="" class="form-control"></td></tr><tr ><td>12</td><td>Chuyển QSD đất (theo kết quả đấu giá đất)
+                            <input type="hidden" name="data[49][row_id]" value="III.12">
+                          </td><td><input type="number" name="data[49][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[49][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[49][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[49][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[49][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[49][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[49][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[49][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[49][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[49][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[49][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[49][value3_per]" value="" class="form-control"></td></tr><tr ><td>13</td><td>Hợp nhất hoặc phân chia QSD đất
+                            <input type="hidden" name="data[50][row_id]" value="III.13">
+                          </td><td><input type="number" name="data[50][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[50][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[50][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[50][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[50][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[50][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[50][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[50][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[50][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[50][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[50][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[50][value3_per]" value="" class="form-control"></td></tr><tr ><td>14</td><td>Thay đổi thông tin người sử dụng đất, chủ sở hữu tài sản gắn liền với đất (tên, giấy tờ pháp nhân, n
+                            <input type="hidden" name="data[51][row_id]" value="III.14">
+                          </td><td><input type="number" name="data[51][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[51][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[51][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[51][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[51][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[51][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[51][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[51][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[51][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[51][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[51][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[51][value3_per]" value="" class="form-control"></td></tr><tr ><td>15</td><td>Xác lập hoặc thay đổi, chấm dứt quyền sử dụng hạn chế thửa đất liền kề
+                            <input type="hidden" name="data[52][row_id]" value="III.15">
+                          </td><td><input type="number" name="data[52][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[52][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[52][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[52][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[52][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[52][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[52][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[52][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[52][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[52][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[52][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[52][value3_per]" value="" class="form-control"></td></tr><tr ><td>16</td><td>Thay đổi diện tích do sạt lở tự nhiên một phần thửa đất
+                            <input type="hidden" name="data[53][row_id]" value="III.16">
+                          </td><td><input type="number" name="data[53][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[53][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[53][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[53][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[53][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[53][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[53][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[53][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[53][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[53][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[53][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[53][value3_per]" value="" class="form-control"></td></tr><tr ><td>17</td><td>Chuyển mục đích không phải xin phép
+                            <input type="hidden" name="data[54][row_id]" value="III.17">
+                          </td><td><input type="number" name="data[54][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[54][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[54][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[54][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[54][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[54][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[54][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[54][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[54][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[54][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[54][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[54][value3_per]" value="" class="form-control"></td></tr><tr ><td>18</td><td>Gia hạn sử dụng đất
+                            <input type="hidden" name="data[55][row_id]" value="III.18">
+                          </td><td><input type="number" name="data[55][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[55][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[55][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[55][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[55][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[55][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[55][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[55][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[55][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[55][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[55][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[55][value3_per]" value="" class="form-control"></td></tr><tr ><td>19</td><td>Chuyển hình thức giao đất, thuê đất
+                            <input type="hidden" name="data[56][row_id]" value="III.19">
+                          </td><td><input type="number" name="data[56][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[56][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[56][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[56][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[56][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[56][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[56][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[56][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[56][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[56][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[56][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[56][value3_per]" value="" class="form-control"></td></tr><tr ><td>20</td><td>Thay đổi thông tin về tài sản gắn liền với đất
+                            <input type="hidden" name="data[57][row_id]" value="III.20">
+                          </td><td><input type="number" name="data[57][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[57][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[57][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[57][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[57][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[57][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[57][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[57][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[57][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[57][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[57][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[57][value3_per]" value="" class="form-control"></td></tr><tr ><td>21</td><td>Có thay đổi đối với những hạn chế về QSD đất, tài sản gắn liền với đất
+                            <input type="hidden" name="data[58][row_id]" value="III.21">
+                          </td><td><input type="number" name="data[58][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[58][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[58][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[58][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[58][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[58][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[58][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[58][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[58][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[58][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[58][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[58][value3_per]" value="" class="form-control"></td></tr><tr ><td>22</td><td>Phát hiện sai sót, nhầm lẫn về nội dung thông tin trong hồ sơ địa chính và GCN QSD đất 
+                            <input type="hidden" name="data[59][row_id]" value="III.22">
+                          </td><td><input type="number" name="data[59][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[59][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[59][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[59][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[59][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[59][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[59][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[59][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[59][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[59][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[59][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[59][value3_per]" value="" class="form-control"></td></tr><tr ><td>23</td><td>Tách thửa hoăc hợp thửa đất 
+                            <input type="hidden" name="data[60][row_id]" value="III.23">
+                          </td><td><input type="number" name="data[60][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[60][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[60][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[60][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[60][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[60][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[60][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[60][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[60][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[60][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[60][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[60][value3_per]" value="" class="form-control"></td></tr><tr ><td>24</td><td>Cấp đổi hoặc cấp lại GCN bị mất
+                            <input type="hidden" name="data[61][row_id]" value="III.24">
+                          </td><td><input type="number" name="data[61][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[61][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[61][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[61][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[61][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[61][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[61][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[61][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[61][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[61][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[61][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[61][value3_per]" value="" class="form-control"></td></tr><tr ><td>25</td><td>Đo đạc thay đổi diện tích, thửa đất, tờ bản đồ
+                            <input type="hidden" name="data[62][row_id]" value="III.25">
+                          </td><td><input type="number" name="data[62][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[62][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[62][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[62][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[62][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[62][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[62][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[62][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[62][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[62][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[62][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[62][value3_per]" value="" class="form-control"></td></tr><tr ><td>26</td><td>Thay đổi, điều chỉnh tên đơn vị, địa giới hành chính
+                            <input type="hidden" name="data[63][row_id]" value="III.26">
+                          </td><td><input type="number" name="data[63][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[63][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[63][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[63][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[63][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[63][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[63][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[63][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[63][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[63][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[63][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[63][value3_per]" value="" class="form-control"></td></tr><tr ><td>27</td><td>Đăng ký bổ sung tài sản gắn liền với đất
+                            <input type="hidden" name="data[64][row_id]" value="III.27">
+                          </td><td><input type="number" name="data[64][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[64][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[64][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[64][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[64][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[64][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[64][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[64][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[64][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[64][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[64][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[64][value3_per]" value="" class="form-control"></td></tr><tr ><td>28</td><td>Hồ sơ khác
+                            <input type="hidden" name="data[65][row_id]" value="III.28">
+                          </td><td><input type="number" name="data[65][value1_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[65][value1_2]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[65][value1_3]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[65][value1_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[65][value2_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[65][value2_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[65][value2_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[65][value2_per]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[65][value3_total]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[65][value3_1]" value="" class="form-control"></td>
+                          <td><input type="number" name="data[65][value3_2]" value="" class="form-control"></td>
+                          <td><input type="text" name="data[65][value3_per]" value="" class="form-control"></td></tr>')
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\ReportGroupController->data_report_group()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\ReportGroupController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

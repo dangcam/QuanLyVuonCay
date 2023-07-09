@@ -1,0 +1,41 @@
+<?php
+return [
+    'user_id' => 'Mã người dùng',
+    'username' => 'Tên người dùng',
+    'password' => 'Mật khẩu',
+    'phonenumber'=>'Số ĐT',
+    'gender' => 'Giới tính',
+    'male'=>'Nam',
+    'female'=>'Nữ',
+    'other' => 'Khác',
+    'user_status'=>'Tình trạng',
+    'group' => 'Chi nhánh',
+    'user_create'=> 'Tạo người dùng',
+    'user_creation_successful' => 'Tạo người dùng thành công',
+    'user_creation_unsuccessful' => 'Tạo người dùng không thành công',
+    'user_edit_successful'=>'Sửa thông tin người dùng thành công',
+    'user_edit_unsuccessful'=>'Sửa thông tin người dùng không thành công',
+    'user_delete_successful'=>'Xoá người dùng thành công',
+    'user_delete_unsuccessful'=>'Xoá người dùng không thành công',
+    'user_password_successful' => 'Thay đổi mật khẩu thành công',
+    'user_password_unsuccessful' => 'Thay đổi mật khẩu không thành công',
+    //
+    'old_password' => 'Mật khẩu cũ',
+    'new_password' => 'Mật khẩu mới',
+    'new_password_confirmation' => 'Xác nhận mật khẩu mới',
+    'password_hint' => 'Nhập mật khẩu mới (Ký tự HOA, đặc biệt, ký tự số)',
+    'pw_not_same' => 'Nhập xác nhận mật khẩu ',
+    'old_password_empty' =>'Nhập mật khẩu cũ và mật khẩu mới',
+    'password_confirm_wrong' => 'Xác nhận mật khẩu không đúng',
+    // phân quyền
+    'user_function_successful' => 'Phân quyền người dùng thành công',
+    'user_function_unsuccessful' => 'Phân quyền người dùng không thành công',
+    //login
+    'sign_in_your_account' => 'Thông tin đăng nhập',
+    'remember_me' => 'Ghi nhớ tôi',
+    'forgot_password'=>'Quên mật khẩu?',
+    'sign_in' => 'Đăng nhập',
+    'user_password_empty' => 'Tên đăng nhập và mật khẩu không được để trống.',
+    'wrong_user_id' => 'Tài khoản không đúng hoặc không tồn tại.',
+    'wrong_password' => 'Sai mật khẩu, vui lòng kiểm tra lại.'
+];

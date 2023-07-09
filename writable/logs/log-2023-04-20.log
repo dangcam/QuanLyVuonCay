@@ -1,0 +1,45 @@
+ERROR - 2023-04-20 07:21:40 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in D:\Xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 D:\Xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'qlbaocao', 3306, '', 0)
+#1 D:\Xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Xampp\htdocs\Codeigniter4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 D:\Xampp\htdocs\Codeigniter4\app\Libraries\lib_auth.php(38): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Xampp\htdocs\Codeigniter4\app\Libraries\lib_auth.php(13): App\Libraries\lib_auth->getFuntionUser(NULL)
+#6 D:\Xampp\htdocs\Codeigniter4\app\Controllers\BaseController.php(58): App\Libraries\lib_auth->__construct()
+#7 D:\Xampp\htdocs\Codeigniter4\system\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#8 D:\Xampp\htdocs\Codeigniter4\system\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+#9 D:\Xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 D:\Xampp\htdocs\Codeigniter4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 D:\Xampp\htdocs\Codeigniter4\system\Commands\Server\rewrite.php(47): require_once('D:\\Xampp\\htdocs...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in D:\Xampp\htdocs\Codeigniter4\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 D:\Xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 D:\Xampp\htdocs\Codeigniter4\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 D:\Xampp\htdocs\Codeigniter4\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 D:\Xampp\htdocs\Codeigniter4\app\Libraries\lib_auth.php(38): CodeIgniter\Database\BaseBuilder->get()
+#4 D:\Xampp\htdocs\Codeigniter4\app\Libraries\lib_auth.php(13): App\Libraries\lib_auth->getFuntionUser(NULL)
+#5 D:\Xampp\htdocs\Codeigniter4\app\Controllers\BaseController.php(58): App\Libraries\lib_auth->__construct()
+#6 D:\Xampp\htdocs\Codeigniter4\system\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+#7 D:\Xampp\htdocs\Codeigniter4\system\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+#8 D:\Xampp\htdocs\Codeigniter4\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 D:\Xampp\htdocs\Codeigniter4\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 D:\Xampp\htdocs\Codeigniter4\system\Commands\Server\rewrite.php(47): require_once('D:\\Xampp\\htdocs...')
+#11 {main}
+CRITICAL - 2023-04-20 07:21:40 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_function`
+WHERE `user_id` IS NULL', [], false)
+ 3 APPPATH\Libraries\lib_auth.php(38): CodeIgniter\Database\BaseBuilder->get()
+ 4 APPPATH\Libraries\lib_auth.php(13): App\Libraries\lib_auth->getFuntionUser(null)
+ 5 APPPATH\Controllers\BaseController.php(58): App\Libraries\lib_auth->__construct()
+ 6 SYSTEMPATH\CodeIgniter.php(907): App\Controllers\BaseController->initController(Object(CodeIgniter\HTTP\IncomingRequest), Object(CodeIgniter\HTTP\Response), Object(CodeIgniter\Log\Logger))
+ 7 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

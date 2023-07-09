@@ -1,0 +1,143 @@
+CRITICAL - 2023-04-19 02:51:04 --> Undefined array key "update"
+in APPPATH\Libraries\lib_auth.php on line 52.
+ 1 APPPATH\Libraries\lib_auth.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "update"', 'APPPATH\\Libraries\\lib_auth.php', 52)
+ 2 APPPATH\Controllers\Dashboard\UserController.php(62): App\Libraries\lib_auth->checkFunction('user', 'update')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\UserController->update_user()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-19 02:56:30 --> Undefined array key "update"
+in APPPATH\Libraries\lib_auth.php on line 52.
+ 1 APPPATH\Libraries\lib_auth.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "update"', 'APPPATH\\Libraries\\lib_auth.php', 52)
+ 2 APPPATH\Controllers\Dashboard\UserController.php(62): App\Libraries\lib_auth->checkFunction('user', 'update')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\UserController->update_user()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-19 02:56:32 --> Undefined array key "update"
+in APPPATH\Libraries\lib_auth.php on line 52.
+ 1 APPPATH\Libraries\lib_auth.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "update"', 'APPPATH\\Libraries\\lib_auth.php', 52)
+ 2 APPPATH\Controllers\Dashboard\UserController.php(62): App\Libraries\lib_auth->checkFunction('user', 'update')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\UserController->update_user()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-19 02:57:45 --> Undefined array key "update"
+in APPPATH\Libraries\lib_auth.php on line 52.
+ 1 APPPATH\Libraries\lib_auth.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "update"', 'APPPATH\\Libraries\\lib_auth.php', 52)
+ 2 APPPATH\Controllers\Dashboard\UserController.php(62): App\Libraries\lib_auth->checkFunction('user', 'update')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\UserController->update_user()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-19 02:58:42 --> Undefined array key "update"
+in APPPATH\Libraries\lib_auth.php on line 52.
+ 1 APPPATH\Libraries\lib_auth.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "update"', 'APPPATH\\Libraries\\lib_auth.php', 52)
+ 2 APPPATH\Controllers\Dashboard\UserController.php(62): App\Libraries\lib_auth->checkFunction('user', 'update')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\UserController->update_user()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-19 02:58:44 --> Undefined array key "update"
+in APPPATH\Libraries\lib_auth.php on line 52.
+ 1 APPPATH\Libraries\lib_auth.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "update"', 'APPPATH\\Libraries\\lib_auth.php', 52)
+ 2 APPPATH\Controllers\Dashboard\UserController.php(62): App\Libraries\lib_auth->checkFunction('user', 'update')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\UserController->update_user()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-19 02:59:08 --> Undefined array key "update"
+in APPPATH\Libraries\lib_auth.php on line 52.
+ 1 APPPATH\Libraries\lib_auth.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "update"', 'APPPATH\\Libraries\\lib_auth.php', 52)
+ 2 APPPATH\Controllers\Dashboard\UserController.php(62): App\Libraries\lib_auth->checkFunction('user', 'update')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\UserController->update_user()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-19 03:07:41 --> Undefined array key "update"
+in APPPATH\Libraries\lib_auth.php on line 52.
+ 1 APPPATH\Libraries\lib_auth.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "update"', 'APPPATH\\Libraries\\lib_auth.php', 52)
+ 2 APPPATH\Controllers\Dashboard\UserController.php(62): App\Libraries\lib_auth->checkFunction('user', 'update')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\UserController->update_user()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-19 03:07:48 --> Undefined array key "update"
+in APPPATH\Libraries\lib_auth.php on line 52.
+ 1 APPPATH\Libraries\lib_auth.php(52): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "update"', 'APPPATH\\Libraries\\lib_auth.php', 52)
+ 2 APPPATH\Controllers\Dashboard\UserController.php(62): App\Libraries\lib_auth->checkFunction('user', 'update')
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\UserController->update_user()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\UserController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-19 03:23:13 --> Undefined property: CodeIgniter\View\View::$session
+in APPPATH\Views\dashboard\user_info_view.php on line 81.
+ 1 APPPATH\Views\dashboard\user_info_view.php(81): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$session', 'APPPATH\\Views\\dashboard\\user_info_view.php', 81)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\dashboard\\user_info_view.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('dashboard/user_info_view', [], true)
+ 5 APPPATH\Controllers\BaseController.php(65): view('dashboard/user_info_view', [...])
+ 6 APPPATH\Controllers\Dashboard\UserController.php(34): App\Controllers\BaseController->page_construct('dashboard/user_info_view', [...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\UserController->info()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\UserController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-19 07:43:26 --> Undefined property: CodeIgniter\View\View::$session
+in APPPATH\Views\layout\header.php on line 90.
+ 1 APPPATH\Views\layout\header.php(90): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$session', 'APPPATH\\Views\\layout\\header.php', 90)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\layout\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('layout/header', [], true)
+ 5 APPPATH\Controllers\BaseController.php(67): view('layout/header', [...])
+ 6 APPPATH\Controllers\Dashboard\HomeController.php(11): App\Controllers\BaseController->page_construct('dashboard/home_view', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\HomeController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\HomeController))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-19 07:46:11 --> Call to a member function remove() on null
+in APPPATH\Controllers\Dashboard\HomeController.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\HomeController->lang()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\HomeController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-19 07:47:32 --> Call to a member function remove() on null
+in APPPATH\Controllers\Dashboard\HomeController.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\HomeController->lang()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\HomeController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-19 07:47:39 --> Call to a member function remove() on null
+in APPPATH\Controllers\Dashboard\HomeController.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\HomeController->lang()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\HomeController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-19 07:48:39 --> Call to a member function get() on null
+in APPPATH\Controllers\Dashboard\HomeController.php on line 21.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\HomeController->lang()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\HomeController))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-04-19 07:53:30 --> Undefined variable $lang
+in APPPATH\Controllers\Dashboard\HomeController.php on line 23.
+ 1 APPPATH\Controllers\Dashboard\HomeController.php(23): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $lang', 'APPPATH\\Controllers\\Dashboard\\HomeController.php', 23)
+ 2 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\HomeController->lang()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\HomeController))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

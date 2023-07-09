@@ -1,0 +1,724 @@
+CRITICAL - 2023-05-16 03:48:54 --> array_values(): Argument #1 ($array) must be of type array, string given
+in APPPATH\Models\ReportGroupModel.php on line 238.
+ 1 APPPATH\Models\ReportGroupModel.php(238): array_values('<tr ><th>I</th><th>Thuộc thẩm quyền của UBND cấp huyện</th><th>0</th>
+                          <th>0</th>
+                          <th>0</th>
+                          <th>0</th>
+                          <th>102</th>
+                          <th>102</th>
+                          <th>0</th>
+                          <th>0.00</th>
+                          <th>15</th>
+                          <th>14</th>
+                          <th>1</th>
+                          <th>7.14</th></tr><tr ><td>1</td><td>Giao đất</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>12</td>
+                          <td>11</td>
+                          <td>1</td>
+                          <td>9.09</td></tr><tr ><td>2</td><td>Cho thuê đất </td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>102</td>
+                          <td>102</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>3</td>
+                          <td>3</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>3</td><td>Bán tài sản gắn liền với QSDĐ</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>4</td><td>Công nhận QSDĐ lần đầu</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>5</td><td>Chuyển mục đích phải xin phép</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>6</td><td>Đính chính GCN</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>7</td><td>Thu hồi GCN</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>8</td><td>Hồ sơ khác</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><th>II</th><th>Thuộc thẩm quyền của Chi nhánh</th><th>0</th>
+                          <th>0</th>
+                          <th>0</th>
+                          <th>0</th>
+                          <th>10</th>
+                          <th>0</th>
+                          <th>10</th>
+                          <th>0.00</th>
+                          <th>30</th>
+                          <th>27</th>
+                          <th>3</th>
+                          <th>11.11</th></tr><tr ><td>1</td><td>Cho thuê, cho thuê lại QSD đất</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>2</td><td>Xóa đăng ký cho thuê, cho thuê lại</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>3</td><td>Thế chấp hoặc thay đổi nội dung thế chấp</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>4</td><td>Xóa đăng ký thế chấp</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>5</td><td>Chuyển đổi QSD đất</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>6</td><td>Chuyển nhượng</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>7</td><td>Thừa kế</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>8</td><td>Tặng cho</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>14</td>
+                          <td>12</td>
+                          <td>2</td>
+                          <td>16.67</td></tr><tr ><td>9</td><td>Góp vốn bằng QSDĐ</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>10</td><td>Xóa đăng ký góp vốn bằng QSDĐ</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>11</td><td>Chuyển QSD đất (theo kết quả giải quyết tranh chấp)</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>12</td><td>Chuyển QSD đất (theo quyết định giải quyết khiếu nại, tố cáo về đất đai)</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>13</td><td>Chuyển QSD đất (theo bản án, quyết định của tòa án, quyết định của cơ quan thi hành án)</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>14</td><td>Chuyển QSD đất (theo kết quả đấu giá đất)</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>10</td>
+                          <td>0</td>
+                          <td>10</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>15</td><td>Hợp nhất hoặc phân chia QSD đất</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>16</td><td>Thay đổi thông tin người sử dụng đất, chủ sở hữu tài sản gắn liền với đất (tên, giấy tờ pháp nhân, n</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>17</td><td>Xác lập hoặc thay đổi, chấm dứt quyền sử dụng hạn chế thửa đất liền kề</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>18</td><td>Thay đổi diện tích do sạt lở tự nhiên một phần thửa đất</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>19</td><td>Chuyển mục đích không</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>20</td><td>Gia hạn sử dụng đất</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>16</td>
+                          <td>15</td>
+                          <td>1</td>
+                          <td>6.67</td></tr><tr ><td>21</td><td>Chuyển hình thức giao đất, thuê đất</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>22</td><td>Thay đổi thông tin về tài sản gắn liền với đất</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>23</td><td>Có thay đổi đối với những hạn chế về QSD đất, tài sản gắn liền với đất</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>24</td><td>Phát hiện sai sót, nhầm lẫn về nội dung thông tin trong hồ sơ địa chính và GCN QSD đất </td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>25</td><td>Thay đổi, điều chỉnh tên đơn vị, địa giới hành chính theo QĐ của cơ quan có thẩm quyền</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>26</td><td>Hồ sơ khác</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><th>III</th><th>Thuộc thẩm quyền của Sở Tài nguyên và Môi trường</th><th>3</th>
+                          <th>4</th>
+                          <th>0</th>
+                          <th>7</th>
+                          <th>1</th>
+                          <th>1</th>
+                          <th>0</th>
+                          <th>0.00</th>
+                          <th>46</th>
+                          <th>43</th>
+                          <th>3</th>
+                          <th>6.98</th></tr><tr ><td>1</td><td>Cho thuê, cho thuê lại QSD đất</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>2</td><td>Chuyển đổi QSD đất</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>3</td><td>Chuyển nhượng</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>4</td><td>Thừa kế</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>5</td><td>Tặng cho</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>6</td><td>Góp vốn bằng QSDĐ</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>7</td><td>Xóa đăng ký góp vốn bằng QSDĐ</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>8</td><td>Chuyển QSD đất (theo thỏa thuận xử lý nợ thế chấp)</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>9</td><td>Chuyển quyền theo kết quả giải quyết tranh chấp</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>10</td><td>Chuyển QSD đất (theo quyết định giải quyết khiếu nại, tố cáo về đất đai)</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>11</td><td>Chuyển QSD đất (theo bản án, quyết định của tòa án, quyết định của cơ quan thi hành án)</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>12</td><td>Chuyển QSD đất (theo kết quả đấu giá đất)</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>13</td><td>Hợp nhất hoặc phân chia QSD đất</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>14</td><td>Thay đổi thông tin người sử dụng đất, chủ sở hữu tài sản gắn liền với đất (tên, giấy tờ pháp nhân, n</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>20</td>
+                          <td>20</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>15</td><td>Xác lập hoặc thay đổi, chấm dứt quyền sử dụng hạn chế thửa đất liền kề</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>16</td><td>Thay đổi diện tích do sạt lở tự nhiên một phần thửa đất</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>17</td><td>Chuyển mục đích không phải xin phép</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>18</td><td>Gia hạn sử dụng đất</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>19</td><td>Chuyển hình thức giao đất, thuê đất</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>20</td><td>Thay đổi thông tin về tài sản gắn liền với đất</td><td>0</td>
+                          <td>3</td>
+                          <td>0</td>
+                          <td>3</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>21</td><td>Có thay đổi đối với những hạn chế về QSD đất, tài sản gắn liền với đất</td><td>2</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>2</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>22</td><td>Phát hiện sai sót, nhầm lẫn về nội dung thông tin trong hồ sơ địa chính và GCN QSD đất </td><td>1</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>1</td>
+                          <td>1</td>
+                          <td>1</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>23</td><td>Tách thửa hoăc hợp thửa đất </td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>24</td><td>Cấp đổi hoặc cấp lại GCN bị mất</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>25</td><td>Đo đạc thay đổi diện tích, thửa đất, tờ bản đồ</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>26</td><td>Thay đổi, điều chỉnh tên đơn vị, địa giới hành chính</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>27</td><td>Đăng ký bổ sung tài sản gắn liền với đất</td><td>0</td>
+                          <td>1</td>
+                          <td>0</td>
+                          <td>1</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td></tr><tr ><td>28</td><td>Hồ sơ khác</td><td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0</td>
+                          <td>0.00</td>
+                          <td>26</td>
+                          <td>23</td>
+                          <td>3</td>
+                          <td>13.04</td></tr>')
+ 2 APPPATH\Controllers\Dashboard\ReportGroupController.php(41): App\Models\ReportGroupModel->getListReportGroupPrint([...])
+ 3 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Dashboard\ReportGroupController->data_report_group_print()
+ 4 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Dashboard\ReportGroupController))
+ 5 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
