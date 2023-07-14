@@ -70,18 +70,19 @@ abstract class BaseController extends Controller
 
     public function silebar_view()
     {
-        $response = '<li>
-                        <a class="has-arrow" href="javascript:void()" aria-expanded="false">
-                            <i class="icon icon-book-open-2"></i><span class="nav-text">'.lang('AppLang.report').'</span>
-                        </a>
+        $response = '';
+        $response = '<li class="nav-label">'.lang('category').'</li>
+                    <li><a class="has-arrow" href="javascript:void(0)" aria-expanded="false"><i
+                        class="icon icon-tablet-mobile"></i><span class="nav-text">'.lang('AppLang.category').'</span></a>
                         <ul aria-expanded="false">';
-                        if($this->libauth->checkFunction('report_group','add'))
-                            $response .= '<li><a href="'.base_url().'dashboard/report_group">'.lang('AppLang.report_group_manager').'</a></li>';
-                            $response .= '<li><a href="'.base_url().'dashboard/report_group/print">'.lang('AppLang.report_group_print').'</a></li>';
-        $response   .='</ul>
-                       </li>';
+        if($this->libauth->checkFunction('type_tree','view'))
+            $response .= '<li><a href="'.base_url().'dashboard/type_tree">'.lang('AppLang.type_of_tree').'</a></li>';
+
+
+        $response .= '  </ul>
+                      </li>';
         $response .= '<li class="nav-label">'.lang('management').'</li>
-            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
+            <li><a class="has-arrow" href="javascript:void(0)" aria-expanded="false"><i
                         class="icon icon-settings-gear-64"></i><span class="nav-text">'.lang('AppLang.system').'</span></a>
                 <ul aria-expanded="false">';
         if($this->libauth->checkFunction('function','view'))
@@ -91,7 +92,7 @@ abstract class BaseController extends Controller
         $response .='
                 </ul>
             </li>
-            <li><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i
+            <li><a class="has-arrow" href="javascript:void(0)" aria-expanded="false"><i
                         class="icon icon icon-single-04"></i><span class="nav-text">'.lang('AppLang.users').'</span></a>
                 <ul aria-expanded="false">';
         if($this->libauth->checkFunction('user','view'))

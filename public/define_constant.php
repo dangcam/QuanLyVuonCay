@@ -3,11 +3,11 @@
 DEFINE('DB_HOST','localhost');
 DEFINE('DB_USER','root');
 DEFINE('DB_PASSWORD','');
-DEFINE('DB_NAME','qlbaocao');
+DEFINE('DB_NAME','quanlyvuoncay');
 DEFINE('DB_PREFIX','');
 
 /** -------- CONFIG --------- **/
-DEFINE('BASE_URL','http://localhost:8080');//
+DEFINE('BASE_URL','http://quanlyvuoncay.com');//
 DEFINE('DEFAULT_LANGUAGE','vi');
 DEFINE('PREFIX',MD5('DC_'));
 DEFINE('COOKIE_EXPIRY',86400);

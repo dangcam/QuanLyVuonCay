@@ -60,16 +60,16 @@ $routes->group('dashboard',['filter'=>'authFilters'], static function ($routes) 
         $routes->post('edit_function','Dashboard\FunctionController::edit_function');
         $routes->post('delete_function','Dashboard\FunctionController::delete_function');
     });
+    $routes->group('type_tree',static function($routes){
+        $routes->get('/','Dashboard\TypeTreeController::index');
+        $routes->post('tree_ajax','Dashboard\TypeTreeController::tree_ajax');
+        $routes->post('add_tree','Dashboard\TypeTreeController::add_tree');
+        $routes->post('edit_tree','Dashboard\TypeTreeController::edit_tree');
+        $routes->post('delete_tree','Dashboard\TypeTreeController::delete_tree');
+    });
     $routes->group('userfunction',static function($routes){
         $routes->post('/','Dashboard\UserFunctionController::index');
         $routes->post('update','Dashboard\UserFunctionController::update');
-    });
-    $routes->group('report_group',static function($routes){
-        $routes->get('/','Dashboard\ReportGroupController::index');
-        $routes->get('print','Dashboard\ReportGroupController::report_print');
-        $routes->post('data_report_group','Dashboard\ReportGroupController::data_report_group');
-        $routes->post('data_report_group_print','Dashboard\ReportGroupController::data_report_group_print');
-        $routes->post('save_report_group','Dashboard\ReportGroupController::save_report_group');
     });
 });
 //$routes->post('login', 'Login::index');

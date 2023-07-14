@@ -9,7 +9,7 @@ return[
     'page_title_users'=>'Danh sách người dùng',
     'page_user_function' => 'Phân quyền người dùng',
     'page_user_info' => 'Thông tin cá nhân',
-    'page_title_report_group' => 'Biểu tổng hợp công tác tiếp nhận và giải quyết HS đất đai',
+    'page_title_type_tree' => 'Giống cây cao su',
 
 
     'do_not_have_permission' => 'Bạn không có quyền thực hiện chức năng này!',
@@ -39,6 +39,7 @@ return[
     'system' => 'Hệ thống',
     'users' => 'Người dùng',
     'report' => 'Báo cáo',
+    'category' => 'Danh mục',
     'year' => 'Năm',
     'month' => 'Tháng',
     // Chức năng
@@ -46,8 +47,7 @@ return[
     'user_manager'=>'Quản lý người dùng',
     'function_manager' => 'Quản lý chức năng',
     'group_manager' => 'Quản lý chi nhánh',
-    'report_group_manager' => 'Báo cáo chi nhánh',
-    'report_group_print' => 'Xem báo cáo',
+    'type_of_tree' => 'Giống cây',
 
     'add_data_unsuccessful' => 'Thêm dữ liệu không thành công',
     'add_data_successful' => 'Thêm dữ liệu thành công',

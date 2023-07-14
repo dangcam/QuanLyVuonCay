@@ -10,6 +10,7 @@
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon.png">
     <!-- Toastr -->
+
     <link rel="stylesheet" href="vendor/toastr/css/toastr.min.css">
     <!-- Custom Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
