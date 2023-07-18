@@ -67,6 +67,13 @@ $routes->group('dashboard',['filter'=>'authFilters'], static function ($routes) 
         $routes->post('edit_tree','Dashboard\TypeTreeController::edit_tree');
         $routes->post('delete_tree','Dashboard\TypeTreeController::delete_tree');
     });
+    $routes->group('garden',static function($routes){
+        $routes->get('/','Dashboard\GardenController::index');
+        $routes->post('garden_ajax','Dashboard\GardenController::garden_ajax');
+        $routes->post('add_garden','Dashboard\GardenController::add_garden');
+        $routes->post('edit_garden','Dashboard\GardenController::edit_garden');
+        $routes->post('delete_garden','Dashboard\GardenController::delete_garden');
+    });
     $routes->group('userfunction',static function($routes){
         $routes->post('/','Dashboard\UserFunctionController::index');
         $routes->post('update','Dashboard\UserFunctionController::update');

@@ -2,7 +2,7 @@
 namespace App\Entities;
 use CodeIgniter\Entity\Entity;
 
-class TypeTreeEntity extends Entity{
+class GardenEntity extends Entity{
     protected $garden_id;
     protected $garden_year ;
     protected $garden_name;
