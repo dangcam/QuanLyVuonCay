@@ -129,7 +129,7 @@
                         </div>
                         <div class="form-group col-md-3">
                             <label><?=lang('GardenLang.year_full')?></label>
-                            <input type="text" id="acreage" name="acreage"
+                            <input type="text" id="year_full" name="year_full"
                                    class="form-control" placeholder="<?=lang('GardenLang.year_full')?>">
                         </div>
                         <div class="form-group col-md-6">

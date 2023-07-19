@@ -74,6 +74,13 @@ $routes->group('dashboard',['filter'=>'authFilters'], static function ($routes) 
         $routes->post('edit_garden','Dashboard\GardenController::edit_garden');
         $routes->post('delete_garden','Dashboard\GardenController::delete_garden');
     });
+    $routes->group('treeline',static function($routes){
+        $routes->get('/','Dashboard\TreeLineController::index');
+        $routes->post('treeline_ajax','Dashboard\TreeLineController::treeline_ajax');
+        $routes->post('add_treeline','Dashboard\TreeLineController::add_treeline');
+        $routes->post('edit_treeline','Dashboard\TreeLineController::edit_treeline');
+        $routes->post('delete_treeline','Dashboard\TreeLineController::delete_treeline');
+    });
     $routes->group('userfunction',static function($routes){
         $routes->post('/','Dashboard\UserFunctionController::index');
         $routes->post('update','Dashboard\UserFunctionController::update');

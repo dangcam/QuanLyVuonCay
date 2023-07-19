@@ -79,6 +79,8 @@ abstract class BaseController extends Controller
             $response .= '<li><a href="'.base_url().'dashboard/type_tree">'.lang('AppLang.type_of_tree').'</a></li>';
         if($this->libauth->checkFunction('garden','view'))
             $response .= '<li><a href="'.base_url().'dashboard/garden">'.lang('AppLang.garden').'</a></li>';
+        if($this->libauth->checkFunction('treeline','view'))
+            $response .= '<li><a href="'.base_url().'dashboard/treeline">'.lang('AppLang.treeline').'</a></li>';
 
 
         $response .= '  </ul>

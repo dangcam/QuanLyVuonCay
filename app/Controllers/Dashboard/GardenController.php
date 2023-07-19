@@ -3,7 +3,6 @@ namespace App\Controllers\Dashboard;
 
 use App\Controllers\BaseController;
 use App\Models\GardenModel;
-use App\Models\TypeTreeModel;
 
 class GardenController extends BaseController
 {
@@ -49,7 +48,7 @@ class GardenController extends BaseController
         if($this->request->getPost()&&($this->libauth->checkFunction('garden','edit')))
         {
             $data_post = $this->request->getPost();
-            $data['result'] = ($this->garden_model->edit_tree($data_post));
+            $data['result'] = ($this->garden_model->edit_garden($data_post));
             $data['message']= $this->garden_model->get_messages();
             echo json_encode(array_values($data));
         }else
@@ -60,7 +59,7 @@ class GardenController extends BaseController
         if($this->request->getPost()&&($this->libauth->checkFunction('garden','delete')))
         {
             $data_post = $this->request->getPost();
-            $data['result'] = ($this->garden_model->delete_tree($data_post));
+            $data['result'] = ($this->garden_model->delete_garden($data_post));
             $data['message']= $this->garden_model->get_messages();
             echo json_encode(array_values($data));
         }else

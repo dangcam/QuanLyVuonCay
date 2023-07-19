@@ -6,13 +6,13 @@ use App\Entities\GardenEntity;
 class GardenModel extends BaseModel
 {
     protected $table      = 'garden';
-    protected $primaryKey = 'garden_id';
+    protected $primaryKey = 'garden_id,garden_year';
     protected $useAutoIncrement = true;
     protected $protectFields = false;
     protected $returnType = GardenEntity::class;
     protected $validationRules = [
         'garden_id'      => 'required|alpha_dash|min_length[3]|max_length[20]|is_unique[garden.garden_id]',
-        'garden_name'     => 'required|max_length[50]'
+        'garden_name'     => 'required|max_length[50]',
     ];
     //
     public function add_garden($data)

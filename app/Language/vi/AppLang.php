@@ -11,6 +11,7 @@ return[
     'page_user_info' => 'Thông tin cá nhân',
     'page_title_type_tree' => 'Giống cây cao su',
     'page_title_garden' => 'Danh mục lô',
+    'page_title_treeline' => 'Danh mục hàng cây',
 
 
     'do_not_have_permission' => 'Bạn không có quyền thực hiện chức năng này!',
@@ -50,6 +51,7 @@ return[
     'group_manager' => 'Quản lý chi nhánh',
     'type_of_tree' => 'Giống cây',
     'garden' => 'Vườn cây (lô)',
+    'treeline' => 'Hàng cây (số cây)',
 
     'add_data_unsuccessful' => 'Thêm dữ liệu không thành công',
     'add_data_successful' => 'Thêm dữ liệu thành công',
