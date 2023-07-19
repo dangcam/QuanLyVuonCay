@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th7 14, 2023 lúc 11:37 AM
+-- Thời gian đã tạo: Th7 19, 2023 lúc 11:41 AM
 -- Phiên bản máy phục vụ: 10.4.28-MariaDB
 -- Phiên bản PHP: 8.0.28
 
@@ -39,7 +39,9 @@ CREATE TABLE `functions` (
 
 INSERT INTO `functions` (`function_id`, `function_name`, `function_status`) VALUES
 ('function', 'function_manager', 1),
+('garden', 'garden', 1),
 ('group', 'group_manager', 1),
+('treeline', 'treeline', 1),
 ('type_tree', 'type_of_tree', 1),
 ('user', 'user_manager', 1);
 
@@ -53,14 +55,25 @@ CREATE TABLE `garden` (
   `garden_id` varchar(20) NOT NULL,
   `garden_year` int(4) NOT NULL,
   `garden_name` varchar(100) NOT NULL,
-  `acreage` double NOT NULL,
-  `year_planting` int(11) NOT NULL,
-  `year_down` int(11) NOT NULL,
-  `year_up` int(11) NOT NULL,
-  `year_full` int(11) NOT NULL,
+  `acreage` varchar(10) NOT NULL,
+  `year_planting` varchar(10) NOT NULL,
+  `year_down` varchar(10) NOT NULL,
+  `year_up` varchar(10) NOT NULL,
+  `year_full` varchar(10) NOT NULL,
   `type_tree` varchar(20) NOT NULL,
   `type_garden` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `garden`
+--
+
+INSERT INTO `garden` (`garden_id`, `garden_year`, `garden_name`, `acreage`, `year_planting`, `year_down`, `year_up`, `year_full`, `type_tree`, `type_garden`) VALUES
+('VC2023001', 2023, 'Vườn cây 01', '256.6', '2012', '2018', '', '', 'RRIV106', 'KD'),
+('VC2023002', 2023, 'Vườn cây 02', '290', '2013', '2019', '', '', 'RRIV104', 'KD'),
+('VC2023003', 2023, 'Vườn cây 03', '500', '2022', '', '', '', 'RRIV2009', 'KTCB'),
+('VC2023004', 2023, 'Vườn cây 01', '', '', '', '', '', '', ''),
+('VC2023005', 2023, 'Vườn cây 01', '', '', '', '', '', '', '');
 
 -- --------------------------------------------------------
 
@@ -81,6 +94,31 @@ CREATE TABLE `groups` (
 
 INSERT INTO `groups` (`group_id`, `group_name`, `group_parent`, `group_status`) VALUES
 ('csdh', 'CƠ SỞ CAI NGHIỆN MA TÚY ĐỨC HẠNH', '', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `treeline`
+--
+
+CREATE TABLE `treeline` (
+  `line_id` varchar(11) NOT NULL,
+  `garden_id` varchar(20) NOT NULL,
+  `line_year` varchar(10) NOT NULL,
+  `tree_live` int(11) NOT NULL,
+  `tree_dead` int(11) NOT NULL,
+  `hole_empty` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `treeline`
+--
+
+INSERT INTO `treeline` (`line_id`, `garden_id`, `line_year`, `tree_live`, `tree_dead`, `hole_empty`) VALUES
+('01', 'VC2023001', '2023', 70, 10, 3),
+('01', 'VC2023002', '2023', 80, 5, 0),
+('02', 'VC2023001', '2023', 72, 8, 1),
+('02', 'VC2023002', '2023', 86, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -150,10 +188,27 @@ CREATE TABLE `user_function` (
 
 INSERT INTO `user_function` (`user_id`, `function_id`, `function_view`, `function_add`, `function_edit`, `function_delete`) VALUES
 ('admin', 'function', 1, 1, 1, 1),
+('admin', 'garden', 1, 1, 1, 1),
 ('admin', 'group', 1, 1, 1, 1),
 ('admin', 'report_group', 1, 1, 1, 1),
+('admin', 'treeline', 1, 1, 1, 1),
 ('admin', 'type_tree', 1, 1, 1, 1),
 ('admin', 'user', 1, 1, 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `worker`
+--
+
+CREATE TABLE `worker` (
+  `worker_id` varchar(20) NOT NULL,
+  `worker_name` varchar(100) NOT NULL,
+  `worker_birthyear` varchar(10) NOT NULL,
+  `worker_year` varchar(10) NOT NULL,
+  `phone_number` varchar(15) NOT NULL,
+  `address` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -178,6 +233,12 @@ ALTER TABLE `groups`
   ADD PRIMARY KEY (`group_id`);
 
 --
+-- Chỉ mục cho bảng `treeline`
+--
+ALTER TABLE `treeline`
+  ADD PRIMARY KEY (`line_id`,`garden_id`,`line_year`);
+
+--
 -- Chỉ mục cho bảng `type_tree`
 --
 ALTER TABLE `type_tree`
@@ -194,6 +255,22 @@ ALTER TABLE `users`
 --
 ALTER TABLE `user_function`
   ADD PRIMARY KEY (`user_id`,`function_id`);
+
+--
+-- Chỉ mục cho bảng `worker`
+--
+ALTER TABLE `worker`
+  ADD PRIMARY KEY (`worker_id`);
+
+--
+-- Các ràng buộc cho các bảng đã đổ
+--
+
+--
+-- Các ràng buộc cho bảng `user_function`
+--
+ALTER TABLE `user_function`
+  ADD CONSTRAINT `user_function_ibfk_2` FOREIGN KEY (`function_id`) REFERENCES `functions` (`function_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
