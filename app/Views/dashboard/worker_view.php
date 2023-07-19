@@ -6,7 +6,7 @@
         <div class="row page-titles mx-0">
             <div class="col-sm-6 p-md-0">
                 <div class="welcome-text">
-                    <h4><?=lang('AppLang.page_title_treeline')?></h4>
+                    <h4><?=lang('AppLang.page_title_worker')?></h4>
                 </div>
             </div>
         </div>
@@ -27,50 +27,35 @@
 
                         <!---->
                         <div class="basic-form">
-                            <form method="post" id="add_treeline">
-                                <div class="form-row">
-                                    <div class="form-group col-md-2">
-                                        <label><?=lang('TreeLineLang.line_year')?></label>
-                                        <select class="form-control" id="line_year" name="line_year">
-                                            <?php
-                                            $nowYear =2022;
-                                            foreach (range(date('Y'), $nowYear) as $i) {
-                                                echo "<option value=$i>$i</option>";
-                                            }
-                                            ?>
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-md-4">
-                                        <label><?=lang('TreeLineLang.garden_id')?></label>
-                                        <select class="form-control" id="garden_id" name="garden_id">
-                                            <?php if (isset($list_garden) && count($list_garden)) :
-                                                foreach ($list_garden as $key => $item) : ?>
-                                                    <option value="<?=$item->garden_id?>"><?=$item->garden_name?></option>
-                                                <?php
-                                                endforeach;
-                                            endif ?>
-                                        </select>
-                                    </div>
-                                </div>
+                            <form method="post" id="add_worker">
+                               
                                 <div class="form-row">
                                     <div class="form-group col-md-3">
-                                        <label><?=lang('TreeLineLang.line_id')?></label>
-                                        <input type="text" name="line_id" id="line_id" class="form-control" placeholder="<?=lang('TreeLineLang.line_id')?>" required>
+                                        <label><?=lang('WorkerLang.worker_id')?></label>
+                                        <input type="text" name="worker_id" id="worker_id" class="form-control" placeholder="<?=lang('WorkerLang.worker_id')?>" required>
                                     </div>
                                     <div class="form-group col-md-3">
-                                        <label><?=lang('TreeLineLang.tree_live')?></label>
-                                        <input type="text" name="tree_live" id="tree_live" class="form-control" placeholder="<?=lang('TreeLineLang.tree_live')?>" >
+                                        <label><?=lang('WorkerLang.worker_name')?></label>
+                                        <input type="text" name="worker_name" id="worker_name" class="form-control" placeholder="<?=lang('WorkerLang.worker_name')?>" >
                                     </div>
                                     <div class="form-group col-md-3">
-                                        <label><?=lang('TreeLineLang.tree_dead')?></label>
-                                        <input type="text" name="tree_dead" id="tree_dead" class="form-control" placeholder="<?=lang('TreeLineLang.tree_dead')?>">
+                                        <label><?=lang('WorkerLang.worker_birthyear')?></label>
+                                        <input type="text" name="worker_birthyear" id="worker_birthyear" class="form-control" placeholder="<?=lang('WorkerLang.worker_birthyear')?>">
                                     </div>
                                     <div class="form-group col-md-3">
-                                        <label><?=lang('TreeLineLang.hole_empty')?></label>
-                                        <input type="text" name="hole_empty" id="hole_empty" class="form-control" placeholder="<?=lang('TreeLineLang.hole_empty')?>">
+                                        <label><?=lang('WorkerLang.worker_year')?></label>
+                                        <input type="text" name="worker_year" id="worker_year" class="form-control" placeholder="<?=lang('WorkerLang.worker_year')?>">
+                                    </div>
+									<div class="form-group col-md-3">
+                                        <label><?=lang('WorkerLang.phone_number')?></label>
+                                        <input type="text" name="phone_number" id="phone_number" class="form-control" placeholder="<?=lang('WorkerLang.phone_number')?>">
+                                    </div>
+									<div class="form-group col-md-3">
+                                        <label><?=lang('WorkerLang.address')?></label>
+                                        <input type="text" name="address" id="address" class="form-control" placeholder="<?=lang('WorkerLang.address')?>">
                                     </div>
                                 </div>
-                                <button type="submit" id="btn_submit" name="add_treeline" class="btn btn-primary "><?=lang('AppLang.save')?></button>
+                                <button type="submit" id="btn_submit" name="add_worker" class="btn btn-primary "><?=lang('AppLang.save')?></button>
                                 <button type="button" id="btn_cancel" class="btn btn-warning"><?=lang('AppLang.cancel')?></button>
                             </form>
                         </div>
@@ -88,10 +73,12 @@
                         <table id="data-table" class="table table-bordered verticle-middle table-responsive-sm" style="width:100%">
                             <thead>
                             <tr>
-                                <th scope="col"><?=lang('TreeLineLang.line_id')?></th>
-                                <th scope="col"><?=lang('TreeLineLang.tree_live')?></th>
-                                <th scope="col"><?=lang('TreeLineLang.tree_dead')?></th>
-                                <th scope="col"><?=lang('TreeLineLang.hole_empty')?></th>
+                                <th scope="col"><?=lang('WorkerLang.worker_id')?></th>
+                                <th scope="col"><?=lang('WorkerLang.worker_name')?></th>
+                                <th scope="col"><?=lang('WorkerLang.worker_birthyear')?></th>
+                                <th scope="col"><?=lang('WorkerLang.worker_year')?></th>
+                                <th scope="col"><?=lang('WorkerLang.phone_number')?></th>
+                                <th scope="col"><?=lang('WorkerLang.address')?></th>
                                 <th scope="col">Action</th>
                             </tr>
                             </thead>
@@ -140,14 +127,14 @@
     jQuery(document).ready(function($) {
 
         function reset_form(){
-            $('#line_id').val('');
-            $('#hole_empty').val();
-            $('#tree_live').val('');
-            $('#tree_dead').val('');
+            $('#worker_id').val('');
+            $('#worker_year').val();
+            $('#worker_name').val('');
+            $('#worker_birthyear').val('');
             //
             var field = document.getElementById("btn_submit");
-            field.setAttribute("name","add_treeline");
-            $('#line_id').prop("readonly", false);
+            field.setAttribute("name","add_worker");
+            $('#worker_id').prop("readonly", false);
         };
 
         var ajaxDataTable = $('#data-table').DataTable({
@@ -164,17 +151,17 @@
                 }
             },
             'columns': [
-                {data: 'line_id'},
-                {data: 'tree_live'},
-                {data: 'tree_dead'},
-                {data: 'hole_empty'},
+                {data: 'worker_id'},
+                {data: 'worker_name'},
+                {data: 'worker_birthyear'},
+                {data: 'worker_year'},
                 {data: 'active'}
             ]
         });
         $('#line_year,#garden_id').change(function(){
             ajaxDataTable.draw();
         });
-        $("#add_treeline").on('submit',function (event) {
+        $("#add_worker").on('submit',function (event) {
             event.preventDefault();
             $("#response_success").hide('fast');
             $("#response_danger").hide('fast');
@@ -208,7 +195,7 @@
         // Delete
         $('#smallModal').on('show.bs.modal', function (event) {
             var button = $(event.relatedTarget) // Button that triggered the modal
-            var recipient = button.data('line_id') // Extract info from data-* attributes
+            var recipient = button.data('worker_id') // Extract info from data-* attributes
             var line_year = $('#line_year').val();
             var garden_id = $('#garden_id').val();
             $("#modal-btn-yes").on("click", function(event){
@@ -219,7 +206,7 @@
                 $.ajax({
                     url: '<?= base_url() ?>dashboard/treeline/delete_treeline',
                     type: 'POST',
-                    data: { line_id:recipient,line_year:line_year,garden_id:garden_id},
+                    data: { worker_id:recipient,line_year:line_year,garden_id:garden_id},
                     dataType:"json",
                     success:function (data) {
                         if(data[0]==0){
@@ -246,18 +233,18 @@
             reset_form();
         });
         $("#data-table").on('click', '.update', function(event){
-            var line_id =  $(this).attr("line_id");
-            var hole_empty =  $(this).attr("hole_empty");
-            var tree_live =  $(this).attr("tree_live");
-            var tree_dead =  $(this).attr("tree_dead");
-            $('#line_id').val(line_id);
-            $('#hole_empty').val(hole_empty);
-            $('#tree_live').val(tree_live);
-            $('#tree_dead').val(tree_dead);
+            var worker_id =  $(this).attr("worker_id");
+            var worker_year =  $(this).attr("worker_year");
+            var worker_name =  $(this).attr("worker_name");
+            var worker_birthyear =  $(this).attr("worker_birthyear");
+            $('#worker_id').val(worker_id);
+            $('#worker_year').val(worker_year);
+            $('#worker_name').val(worker_name);
+            $('#worker_birthyear').val(worker_birthyear);
             //
             var field = document.getElementById("btn_submit");
             field.setAttribute("name","update_user");
-            $('#line_id').prop("readonly", true);
+            $('#worker_id').prop("readonly", true);
         });       
 
     });
