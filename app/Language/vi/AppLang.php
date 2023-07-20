@@ -12,6 +12,8 @@ return[
     'page_title_type_tree' => 'Giống cây cao su',
     'page_title_garden' => 'Danh mục lô',
     'page_title_treeline' => 'Danh mục hàng cây',
+    'page_title_worker' => 'Danh mục công nhân',
+    'page_title_treepart' => 'Phân hàng cây cho công nhân',
 
 
     'do_not_have_permission' => 'Bạn không có quyền thực hiện chức năng này!',
@@ -52,6 +54,8 @@ return[
     'type_of_tree' => 'Giống cây',
     'garden' => 'Vườn cây (lô)',
     'treeline' => 'Hàng cây (số cây)',
+    'worker' => 'Công nhân',
+    'treepart' => 'Phần cây',
 
     'add_data_unsuccessful' => 'Thêm dữ liệu không thành công',
     'add_data_successful' => 'Thêm dữ liệu thành công',

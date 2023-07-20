@@ -16,8 +16,7 @@ class WorkerController extends BaseController
     {
         if($this->libauth->checkFunction('worker','view')) {
             $meta = array('page_title' => lang('AppLang.page_title_worker'));
-            $data['list_garden'] = $this->worker_model->list_garden();
-            return $this->page_construct('dashboard/worker_view', $meta,$data);
+            return $this->page_construct('dashboard/worker_view', $meta);
         }else
             return view('errors/html/error_403');
     }

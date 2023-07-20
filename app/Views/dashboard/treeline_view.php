@@ -256,7 +256,7 @@
             $('#tree_dead').val(tree_dead);
             //
             var field = document.getElementById("btn_submit");
-            field.setAttribute("name","update_user");
+            field.setAttribute("name","edit_treeline");
             $('#line_id').prop("readonly", true);
         });       
 

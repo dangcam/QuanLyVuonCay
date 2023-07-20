@@ -6,7 +6,7 @@
         <div class="row page-titles mx-0">
             <div class="col-sm-6 p-md-0">
                 <div class="welcome-text">
-                    <h4><?=lang('AppLang.page_title_worker')?></h4>
+                    <h4><?=lang('AppLang.page_title_treepart')?></h4>
                 </div>
             </div>
         </div>
@@ -27,35 +27,50 @@
 
                         <!---->
                         <div class="basic-form">
-                            <form method="post" id="add_worker">
-                               
+                            <form method="post" id="add_treepart">
                                 <div class="form-row">
-                                    <div class="form-group col-md-3">
-                                        <label><?=lang('WorkerLang.worker_id')?></label>
-                                        <input type="text" name="worker_id" id="worker_id" class="form-control" placeholder="<?=lang('WorkerLang.worker_id')?>" required>
+                                    <div class="form-group col-md-2">
+                                        <label><?=lang('TreePartLang.line_year')?></label>
+                                        <select class="form-control" id="line_year" name="line_year">
+                                            <?php
+                                            $nowYear =2022;
+                                            foreach (range(date('Y'), $nowYear) as $i) {
+                                                echo "<option value=$i>$i</option>";
+                                            }
+                                            ?>
+                                        </select>
                                     </div>
                                     <div class="form-group col-md-3">
-                                        <label><?=lang('WorkerLang.worker_name')?></label>
-                                        <input type="text" name="worker_name" id="worker_name" class="form-control" placeholder="<?=lang('WorkerLang.worker_name')?>" >
+                                        <label><?=lang('TreePartLang.worker_id')?></label>
+                                        <select class="form-control" id="worker_id" name="worker_id">
+                                            <?php if (isset($list_worker) && count($list_worker)) :
+                                                foreach ($list_worker as $key => $item) : ?>
+                                                    <option value="<?=$item->worker_id?>"><?=$item->worker_name?></option>
+                                                <?php
+                                                endforeach;
+                                            endif ?>
+                                        </select>
+                                    </div>
+                                    <div class="form-group col-md-4">
+                                        <label><?=lang('TreePartLang.garden_id')?></label>
+                                        <select class="form-control" id="garden_id" name="garden_id">
+                                            <?php if (isset($list_garden) && count($list_garden)) :
+                                                foreach ($list_garden as $key => $item) : ?>
+                                                    <option value="<?=$item->garden_id?>"><?=$item->garden_name?></option>
+                                                <?php
+                                                endforeach;
+                                            endif ?>
+                                        </select>
                                     </div>
                                     <div class="form-group col-md-3">
-                                        <label><?=lang('WorkerLang.worker_birthyear')?></label>
-                                        <input type="text" name="worker_birthyear" id="worker_birthyear" class="form-control" placeholder="<?=lang('WorkerLang.worker_birthyear')?>">
-                                    </div>
-                                    <div class="form-group col-md-3">
-                                        <label><?=lang('WorkerLang.worker_year')?></label>
-                                        <input type="text" name="worker_year" id="worker_year" class="form-control" placeholder="<?=lang('WorkerLang.worker_year')?>">
-                                    </div>
-									<div class="form-group col-md-3">
-                                        <label><?=lang('WorkerLang.phone_number')?></label>
-                                        <input type="text" name="phone_number" id="phone_number" class="form-control" placeholder="<?=lang('WorkerLang.phone_number')?>">
-                                    </div>
-									<div class="form-group col-md-3">
-                                        <label><?=lang('WorkerLang.address')?></label>
-                                        <input type="text" name="address" id="address" class="form-control" placeholder="<?=lang('WorkerLang.address')?>">
+                                        <label><?=lang('TreePartLang.line_id')?></label>
+                                        <select class="form-control" id="line_id" name="line_id">
+
+                                        </select>
                                     </div>
                                 </div>
-                                <button type="submit" id="btn_submit" name="add_worker" class="btn btn-primary "><?=lang('AppLang.save')?></button>
+
+                                <button type="submit" id="btn_submit" name="add_treepart" class="btn btn-primary "><?=lang('AppLang.save')?></button>
                                 <button type="button" id="btn_cancel" class="btn btn-warning"><?=lang('AppLang.cancel')?></button>
                             </form>
                         </div>
@@ -73,12 +88,11 @@
                         <table id="data-table" class="table table-bordered verticle-middle table-responsive-sm" style="width:100%">
                             <thead>
                             <tr>
-                                <th scope="col"><?=lang('WorkerLang.worker_id')?></th>
-                                <th scope="col"><?=lang('WorkerLang.worker_name')?></th>
-                                <th scope="col"><?=lang('WorkerLang.worker_birthyear')?></th>
-                                <th scope="col"><?=lang('WorkerLang.worker_year')?></th>
-                                <th scope="col"><?=lang('WorkerLang.phone_number')?></th>
-                                <th scope="col"><?=lang('WorkerLang.address')?></th>
+                                <th scope="col"><?=lang('TreePartLang.garden_id')?></th>
+                                <th scope="col"><?=lang('TreeLineLang.line_id')?></th>
+                                <th scope="col"><?=lang('TreeLineLang.tree_live')?></th>
+                                <th scope="col"><?=lang('TreeLineLang.tree_dead')?></th>
+                                <th scope="col"><?=lang('TreeLineLang.hole_empty')?></th>
                                 <th scope="col">Action</th>
                             </tr>
                             </thead>
@@ -125,20 +139,21 @@
 
 <script>
     jQuery(document).ready(function($) {
-
+        let list_treeline;
         function reset_form(){
-            $('#worker_id').val('');
-            $('#worker_year').val();
-            $('#worker_name').val('');
-            $('#worker_birthyear').val('');
-            $('#phone_number').val('');
-            $('#address').val('');
+            $('#line_id').val('');
             //
             var field = document.getElementById("btn_submit");
-            field.setAttribute("name","add_worker");
-            $('#worker_id').prop("readonly", false);
+            field.setAttribute("name","add_treepart");
         };
-
+        function load_select_line_id() {
+            console.log(list_treeline);
+            var select_html ="";
+            list_treeline.forEach((rowData) => {
+                select_html +="<option value=\""+rowData['line_id']+"\">"+rowData['line_id']+"</option>";
+            });
+            $("#line_id").html(select_html);
+        }
         var ajaxDataTable = $('#data-table').DataTable({
             'processing': true,
             'serverSide': true,
@@ -146,33 +161,37 @@
             "aLengthMenu": [[10, 25, 50, 100, -1], [10, 25, 50, 100, "<?= lang('AppLang.all') ?>"]],
             'searching': true, // Remove default Search Control
             'ajax': {
-                'url': '<?=base_url()?>dashboard/worker/worker_ajax',
+                'url': '<?=base_url()?>dashboard/treepart/treepart_ajax',
                 'data': function(data){
                     data.searchYear = $('#line_year').val();
                     data.searchGarden = $('#garden_id').val();
+                    data.searchWorker = $('#worker_id').val();
+                },
+                'complete': function (data) {
+                    list_treeline = data.responseJSON['list_treeline'];
+                    load_select_line_id();
                 }
             },
             'columns': [
-                {data: 'worker_id'},
-                {data: 'worker_name'},
-                {data: 'worker_birthyear'},
-                {data: 'worker_year'},
-                {data: 'phone_number'},
-                {data: 'address'},
+                {data: 'garden_id'},
+                {data: 'line_id'},
+                {data: 'tree_live'},
+                {data: 'tree_dead'},
+                {data: 'hole_empty'},
                 {data: 'active'}
             ]
         });
-        $('#line_year,#garden_id').change(function(){
+        $('#line_year,#garden_id,#worker_id').change(function(){
             ajaxDataTable.draw();
         });
-        $("#add_worker").on('submit',function (event) {
+        $("#add_treepart").on('submit',function (event) {
             event.preventDefault();
             $("#response_success").hide('fast');
             $("#response_danger").hide('fast');
             var name = $("#btn_submit").attr("name");
             var formData = $(this).serialize();
             $.ajax({
-                url:"<?= base_url() ?>dashboard/worker/"+name,
+                url:"<?= base_url() ?>dashboard/treepart/"+name,
                 method:"POST",
                 data:formData,
                 dataType:"json",
@@ -199,16 +218,19 @@
         // Delete
         $('#smallModal').on('show.bs.modal', function (event) {
             var button = $(event.relatedTarget) // Button that triggered the modal
-            var recipient = button.data('worker_id') // Extract info from data-* attributes
+            var recipient = button.data('line_id') // Extract info from data-* attributes
+            var line_year = $('#line_year').val();
+            var garden_id = $('#garden_id').val();
+            var worker_id = $('#worker_id').val();
             $("#modal-btn-yes").on("click", function(event){
                 $("#smallModal").modal('hide');
                 event.preventDefault();
                 $("#response_success").hide('fast');
                 $("#response_danger").hide('fast');
                 $.ajax({
-                    url: '<?= base_url() ?>dashboard/worker/delete_worker',
+                    url: '<?= base_url() ?>dashboard/treepart/delete_treepart',
                     type: 'POST',
-                    data: { worker_id:recipient},
+                    data: { line_id:recipient,line_year:line_year,garden_id:garden_id,worker_id:worker_id},
                     dataType:"json",
                     success:function (data) {
                         if(data[0]==0){
@@ -234,24 +256,6 @@
             //
             reset_form();
         });
-        $("#data-table").on('click', '.update', function(event){
-            var worker_id =  $(this).attr("worker_id");
-            var worker_year =  $(this).attr("worker_year");
-            var worker_name =  $(this).attr("worker_name");
-            var worker_birthyear =  $(this).attr("worker_birthyear");
-            var phone_number =  $(this).attr("phone_number");
-            var address =  $(this).attr("address");
-            $('#worker_id').val(worker_id);
-            $('#worker_year').val(worker_year);
-            $('#worker_name').val(worker_name);
-            $('#worker_birthyear').val(worker_birthyear);
-            $('#phone_number').val(phone_number);
-            $('#address').val(address);
-            //
-            var field = document.getElementById("btn_submit");
-            field.setAttribute("name","edit_worker");
-            $('#worker_id').prop("readonly", true);
-        });       
 
     });
 </script>

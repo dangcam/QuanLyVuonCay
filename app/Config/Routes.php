@@ -81,6 +81,20 @@ $routes->group('dashboard',['filter'=>'authFilters'], static function ($routes) 
         $routes->post('edit_treeline','Dashboard\TreeLineController::edit_treeline');
         $routes->post('delete_treeline','Dashboard\TreeLineController::delete_treeline');
     });
+    $routes->group('worker',static function($routes){
+        $routes->get('/','Dashboard\WorkerController::index');
+        $routes->post('worker_ajax','Dashboard\WorkerController::worker_ajax');
+        $routes->post('add_worker','Dashboard\WorkerController::add_worker');
+        $routes->post('edit_worker','Dashboard\WorkerController::edit_worker');
+        $routes->post('delete_worker','Dashboard\WorkerController::delete_worker');
+    });
+    $routes->group('treepart',static function($routes){
+        $routes->get('/','Dashboard\TreePartController::index');
+        $routes->post('treepart_ajax','Dashboard\TreePartController::treepart_ajax');
+        $routes->post('add_treepart','Dashboard\TreePartController::add_treepart');
+        $routes->post('edit_treepart','Dashboard\TreePartController::edit_treepart');
+        $routes->post('delete_treepart','Dashboard\TreePartController::delete_treepart');
+    });
     $routes->group('userfunction',static function($routes){
         $routes->post('/','Dashboard\UserFunctionController::index');
         $routes->post('update','Dashboard\UserFunctionController::update');

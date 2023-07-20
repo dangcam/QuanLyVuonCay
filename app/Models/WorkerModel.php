@@ -11,7 +11,7 @@ class WorkerModel extends BaseModel
     protected $protectFields = false;
     protected $returnType = WorkerEntity::class;
     protected $validationRules = [
-        'worker_id'      => 'required|alpha_dash|min_length[1]|max_length[10]is_unique[worker.worker_id]',
+        'worker_id'      => 'required|alpha_dash|min_length[5]|max_length[20]|is_unique[worker.worker_id]',
         'worker_name'     => 'required|max_length[50]'
     ];
     //
@@ -37,8 +37,10 @@ class WorkerModel extends BaseModel
     }
     public function edit_worker($data)
     {
+        $worker_id = $data['worker_id'];
         unset($data['edit']);
-        $result = $this->replace($data);
+        unset($data['worker_id']);
+        $result = $this->update($worker_id,$data);
         if($result)
         {
             $this->set_message("WorkerLang.worker_update_successful");
@@ -75,8 +77,6 @@ class WorkerModel extends BaseModel
         $strInput=$postData['search']['value'];
 
         // Custom search filter
-        $searchYear = $postData['searchYear'];
-        $searchGarden = $postData['searchGarden'];
 
         //
         ## Total number of records without filtering

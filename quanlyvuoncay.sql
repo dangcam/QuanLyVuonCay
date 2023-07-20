@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th7 19, 2023 lúc 11:41 AM
+-- Thời gian đã tạo: Th7 20, 2023 lúc 11:56 AM
 -- Phiên bản máy phục vụ: 10.4.28-MariaDB
 -- Phiên bản PHP: 8.0.28
 
@@ -42,8 +42,10 @@ INSERT INTO `functions` (`function_id`, `function_name`, `function_status`) VALU
 ('garden', 'garden', 1),
 ('group', 'group_manager', 1),
 ('treeline', 'treeline', 1),
+('treepart', 'treepart', 1),
 ('type_tree', 'type_of_tree', 1),
-('user', 'user_manager', 1);
+('user', 'user_manager', 1),
+('worker', 'worker', 1);
 
 -- --------------------------------------------------------
 
@@ -71,9 +73,7 @@ CREATE TABLE `garden` (
 INSERT INTO `garden` (`garden_id`, `garden_year`, `garden_name`, `acreage`, `year_planting`, `year_down`, `year_up`, `year_full`, `type_tree`, `type_garden`) VALUES
 ('VC2023001', 2023, 'Vườn cây 01', '256.6', '2012', '2018', '', '', 'RRIV106', 'KD'),
 ('VC2023002', 2023, 'Vườn cây 02', '290', '2013', '2019', '', '', 'RRIV104', 'KD'),
-('VC2023003', 2023, 'Vườn cây 03', '500', '2022', '', '', '', 'RRIV2009', 'KTCB'),
-('VC2023004', 2023, 'Vườn cây 01', '', '', '', '', '', '', ''),
-('VC2023005', 2023, 'Vườn cây 01', '', '', '', '', '', '', '');
+('VC2023003', 2023, 'Vườn cây 03', '500', '2022', '', '', '', 'RRIV2009', 'KTCB');
 
 -- --------------------------------------------------------
 
@@ -117,8 +117,31 @@ CREATE TABLE `treeline` (
 INSERT INTO `treeline` (`line_id`, `garden_id`, `line_year`, `tree_live`, `tree_dead`, `hole_empty`) VALUES
 ('01', 'VC2023001', '2023', 70, 10, 3),
 ('01', 'VC2023002', '2023', 80, 5, 0),
-('02', 'VC2023001', '2023', 72, 8, 1),
+('02', 'VC2023001', '2023', 72, 8, 2),
 ('02', 'VC2023002', '2023', 86, 1, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `treepart`
+--
+
+CREATE TABLE `treepart` (
+  `garden_id` varchar(20) NOT NULL,
+  `line_id` varchar(20) NOT NULL,
+  `line_year` varchar(20) NOT NULL,
+  `worker_id` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `treepart`
+--
+
+INSERT INTO `treepart` (`garden_id`, `line_id`, `line_year`, `worker_id`) VALUES
+('VC2023001', '01', '2023', 'CN002'),
+('VC2023001', '02', '2023', 'CN002'),
+('VC2023002', '01', '2023', 'CN001'),
+('VC2023002', '02', '2023', 'CN002');
 
 -- --------------------------------------------------------
 
@@ -192,8 +215,10 @@ INSERT INTO `user_function` (`user_id`, `function_id`, `function_view`, `functio
 ('admin', 'group', 1, 1, 1, 1),
 ('admin', 'report_group', 1, 1, 1, 1),
 ('admin', 'treeline', 1, 1, 1, 1),
+('admin', 'treepart', 1, 1, 1, 1),
 ('admin', 'type_tree', 1, 1, 1, 1),
-('admin', 'user', 1, 1, 1, 1);
+('admin', 'user', 1, 1, 1, 1),
+('admin', 'worker', 1, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -209,6 +234,14 @@ CREATE TABLE `worker` (
   `phone_number` varchar(15) NOT NULL,
   `address` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `worker`
+--
+
+INSERT INTO `worker` (`worker_id`, `worker_name`, `worker_birthyear`, `worker_year`, `phone_number`, `address`) VALUES
+('CN001', 'Nguyễn Văn A', '1990', '2015', '0838371093', 'Bình Phước'),
+('CN002', 'Nguyễn Văn B', '2000', '2020', '0979371093', 'Bình Phước');
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -237,6 +270,12 @@ ALTER TABLE `groups`
 --
 ALTER TABLE `treeline`
   ADD PRIMARY KEY (`line_id`,`garden_id`,`line_year`);
+
+--
+-- Chỉ mục cho bảng `treepart`
+--
+ALTER TABLE `treepart`
+  ADD PRIMARY KEY (`garden_id`,`line_id`,`line_year`,`worker_id`);
 
 --
 -- Chỉ mục cho bảng `type_tree`
