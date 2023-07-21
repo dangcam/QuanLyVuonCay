@@ -71,8 +71,10 @@ abstract class BaseController extends Controller
     public function silebar_view()
     {
         $response = '';
-        if($this->libauth->checkFunction('treepart','view'))
-            $response .= '<li><a href="'.base_url().'dashboard/treepart"><i class="icon icon-form"></i><span class="nav-text">'.lang('AppLang.treepart').'</span></a></li>';
+        if($this->libauth->checkFunction('treepart','view')) {
+            $response .= '<li><a href="' . base_url() . 'dashboard/treepart"><i class="icon icon-form"></i><span class="nav-text">' . lang('AppLang.treepart') . '</span></a></li>';
+            $response .= '<li><a href="' . base_url() . 'dashboard/treepart/report"><i class="icon icon-book-open-2"></i></i><span class="nav-text">' . lang('AppLang.report') . '</span></a></li>';
+        }
 
         $response .= '<li class="nav-label">'.lang('category').'</li>
                     <li><a class="has-arrow" href="javascript:void(0)" aria-expanded="false"><i

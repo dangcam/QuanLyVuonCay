@@ -22,6 +22,27 @@ class TreePartController extends BaseController
         }else
             return view('errors/html/error_403');
     }
+    public function report()
+    {
+        if($this->libauth->checkFunction('treepart','view')) {
+            $meta = array('page_title' => lang('AppLang.page_title_treepart_report'));
+            $data['list_garden'] = $this->treepart_model->list_garden();
+            $data['list_worker'] = $this->treepart_model->list_worker();
+            return $this->page_construct('dashboard/treepart_report_view', $meta,$data);
+        }else
+            return view('errors/html/error_403');
+    }
+
+    public function report_ajax()
+    {
+        if($this->request->getPost())
+        {
+            $data = $this->treepart_model->get_treepart_print($this->request->getPost());
+            echo json_encode(array_values($data));
+        }else {
+            echo json_encode(array_values('No Data'));
+        }
+    }
     public function treepart_ajax()
     {
         if($this->request->getPost())

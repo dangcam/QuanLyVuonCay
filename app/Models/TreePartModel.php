@@ -86,6 +86,61 @@ class TreePartModel extends BaseModel
         $tb = $this->db->table('worker');
         return $tb->get()->getResult();
     }
+    public function get_treepart_print($postData = null){
+        $line_year = $postData['line_year'];
+        $worker_id = $postData['worker_id'];
+        $sql = 'SELECT treepart.garden_id,treepart.line_id,treeline.tree_live,
+                        treeline.tree_dead,treeline.hole_empty
+                    FROM treepart,treeline 
+                        WHERE (treepart.line_year = ? AND treepart.worker_id = ?)
+                               AND (treepart.line_year = treeline.line_year 
+                                    AND treepart.line_id = treeline.line_id
+                                    AND treepart.garden_id = treeline.garden_id)';
+        $result = $this->db->query($sql, [$line_year,$worker_id])->getResult();
+        $rp_row = array();
+        $rp_row[0][0] = "Tổng cộng";
+        $rp_row[0][1] = 0;
+        $rp_row[0][2] = 0;
+        $rp_row[0][3] = 0;
+        $rp_row[0][4] = 0;
+        $rp_row[0][5] = 0;
+        $i = 0;
+        $response = '';
+        foreach($result as $key){
+            $i++;
+            $rp_row[$i][0] = $key->garden_id;
+            $rp_row[$i][1] = $key->line_id;
+            $rp_row[$i][2] = (int)$key->tree_live;
+            $rp_row[$i][3] = (int)$key->tree_dead;
+            $rp_row[$i][4] = (int)$key->hole_empty;
+            $rp_row[$i][5] = (int)$key->tree_live + (int)$key->tree_dead + (int)$key->hole_empty;
+
+            $rp_row[0][1] = $i;
+            $rp_row[0][2] = (int)$key->tree_live + (int)$rp_row[0][2];
+            $rp_row[0][3] = (int)$key->tree_dead + (int)$rp_row[0][3];
+            $rp_row[0][4] = (int)$key->hole_empty + (int)$rp_row[0][4];
+            $rp_row[0][5] = (int)$rp_row[$i][5] + (int)$rp_row[0][5];
+            $response .= '<tr>';
+            $response .= '<td>' . $rp_row[$i][0] . '</td>';
+            $response .= '<td>' . $rp_row[$i][1] . '</td>';
+            $response .= '<td>' . $rp_row[$i][2] . '</td>';
+            $response .= '<td>' . $rp_row[$i][3] . '</td>';
+            $response .= '<td>' . $rp_row[$i][4] . '</td>';
+            $response .= '<td>' . $rp_row[$i][5] . '</td>';
+            $response .= '</tr>';
+        }
+        $response .= '<tr>';
+        $response .= '<th>' . $rp_row[0][0] . '</th>';
+        $response .= '<th>' . $rp_row[0][1] . '</th>';
+        $response .= '<th>' . $rp_row[0][2] . '</th>';
+        $response .= '<th>' . $rp_row[0][3] . '</th>';
+        $response .= '<th>' . $rp_row[0][4] . '</th>';
+        $response .= '<th>' . $rp_row[0][5] . '</th>';
+        $response .= '</tr>';
+        $data_table['data_table'] = array_values($rp_row);
+        $data_table['response'] = $response;
+        return $data_table;
+    }
     public function get_treepart($postData=null){
         ## Read value
         $draw = $postData['draw'];
@@ -134,7 +189,8 @@ class TreePartModel extends BaseModel
 
                 "active"=> ' <span>                                                                                   
                             <a href="#" data-toggle="modal" data-target="#smallModal"
-                                data-placement="top" title="'.lang('AppLang.delete').'" data-line_id="'.$record->line_id.'">
+                                data-placement="top" title="'.lang('AppLang.delete').'" data-line_id="'.$record->line_id.'"
+                                data-garden_id="'.$record->garden_id.'">
                                 <i class="fa fa-close color-danger"></i></a>
                             </span>'
             );

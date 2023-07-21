@@ -94,6 +94,8 @@ $routes->group('dashboard',['filter'=>'authFilters'], static function ($routes) 
         $routes->post('add_treepart','Dashboard\TreePartController::add_treepart');
         $routes->post('edit_treepart','Dashboard\TreePartController::edit_treepart');
         $routes->post('delete_treepart','Dashboard\TreePartController::delete_treepart');
+        $routes->get('report','Dashboard\TreePartController::report');
+        $routes->post('report_ajax','Dashboard\TreePartController::report_ajax');
     });
     $routes->group('userfunction',static function($routes){
         $routes->post('/','Dashboard\UserFunctionController::index');

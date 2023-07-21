@@ -14,6 +14,7 @@ return[
     'page_title_treeline' => 'Danh mục hàng cây',
     'page_title_worker' => 'Danh mục công nhân',
     'page_title_treepart' => 'Phân hàng cây cho công nhân',
+    'page_title_treepart_report' => 'Báo báo phần cây',
 
 
     'do_not_have_permission' => 'Bạn không có quyền thực hiện chức năng này!',
@@ -56,6 +57,7 @@ return[
     'treeline' => 'Hàng cây (số cây)',
     'worker' => 'Công nhân',
     'treepart' => 'Phần cây',
+    'report' => 'Báo cáo',
 
     'add_data_unsuccessful' => 'Thêm dữ liệu không thành công',
     'add_data_successful' => 'Thêm dữ liệu thành công',

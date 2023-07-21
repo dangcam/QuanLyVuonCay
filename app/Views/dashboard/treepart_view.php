@@ -147,7 +147,6 @@
             field.setAttribute("name","add_treepart");
         };
         function load_select_line_id() {
-            console.log(list_treeline);
             var select_html ="";
             list_treeline.forEach((rowData) => {
                 select_html +="<option value=\""+rowData['line_id']+"\">"+rowData['line_id']+"</option>";
@@ -218,9 +217,9 @@
         // Delete
         $('#smallModal').on('show.bs.modal', function (event) {
             var button = $(event.relatedTarget) // Button that triggered the modal
-            var recipient = button.data('line_id') // Extract info from data-* attributes
+            var recipient = button.data('line_id'); // Extract info from data-* attributes
             var line_year = $('#line_year').val();
-            var garden_id = $('#garden_id').val();
+            var garden_id = button.data('garden_id');
             var worker_id = $('#worker_id').val();
             $("#modal-btn-yes").on("click", function(event){
                 $("#smallModal").modal('hide');
